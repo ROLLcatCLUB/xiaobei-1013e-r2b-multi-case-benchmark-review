@@ -48,23 +48,23 @@ https://github.com/ROLLcatCLUB/$repoName
 
 Result:
 
-https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/docs/audit/1013E_R2_result.json
+https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/main/docs/audit/1013E_R2_result.json
 
 Report:
 
-https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/docs/audit/1013E_R2_report.md
+https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/main/docs/audit/1013E_R2_report.md
 
 Case matrix:
 
-https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/docs/audit/case_results_1013E_R2.json
+https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/main/docs/audit/case_results_1013E_R2.json
 
 Prompt template:
 
-https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/docs/audit/prompt_repair_1013E_R2.md
+https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/main/docs/audit/prompt_repair_1013E_R2.md
 
 Contract runner:
 
-https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/scripts/run_prep_room_1013e_r2_multi_case_benchmark.py
+https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/main/scripts/run_prep_room_1013e_r2_multi_case_benchmark.py
 
 ## GPT Review Focus
 
@@ -79,3 +79,4 @@ https://raw.githubusercontent.com/ROLLcatCLUB/$repoName/master/scripts/run_prep_
 ## Important
 
 This repo is a review area only. It is **not** a full deployment or mainline code source.
+
