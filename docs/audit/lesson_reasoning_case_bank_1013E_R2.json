@@ -1,0 +1,405 @@
+[
+  {
+    "case_id": "quick_daily_basic_ready",
+    "lesson_design_mode": "quick_daily",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "今天时间比较紧，先帮我把这节课整理成一版明天能上课的基本设计。",
+    "student_baseline": "学生能说出常见颜色，也能表达喜欢或不喜欢，但说理由时容易停在好看、漂亮。",
+    "core_learning_problem": "让学生能把颜色和感受联系起来，并说出简单理由。",
+    "resource_budget": "low",
+    "constraints": [
+      "只用教材图、几张生活图片和普通色卡",
+      "少追问"
+    ],
+    "available_resource_candidates": [
+      "教材图例",
+      "生活冷暖色图片",
+      "普通色卡"
+    ],
+    "expected_target_sections": [
+      "analysis",
+      "teaching_process"
+    ],
+    "expected_impact_scope": [
+      "big_screen",
+      "student_activity",
+      "evidence_note"
+    ],
+    "expected_quality_level": "basic_usable"
+  },
+  {
+    "case_id": "quick_daily_no_print",
+    "lesson_design_mode": "quick_daily",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "今天不能打印学习单，帮我把探究和评价改成不用纸也能完成。",
+    "student_baseline": "学生愿意看图说感受，但记录习惯还不稳定。",
+    "core_learning_problem": "在没有纸质学习单的条件下保留表达和评价证据。",
+    "resource_budget": "low",
+    "constraints": [
+      "不能打印",
+      "只保留板书、大屏和口头表达"
+    ],
+    "available_resource_candidates": [
+      "大屏图片",
+      "黑板板书",
+      "教师拍照记录"
+    ],
+    "expected_target_sections": [
+      "preparation",
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "big_screen",
+      "evidence_note",
+      "teacher_action"
+    ],
+    "expected_quality_level": "basic_usable"
+  },
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "lesson_design_mode": "standard_daily",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+    "student_baseline": "学生知道红、黄、蓝等颜色，也会说喜欢，但冷暖色理解停在表层。",
+    "core_learning_problem": "帮助学生从颜色喜好转向用温暖、清凉等感受分类并说明理由。",
+    "resource_budget": "medium",
+    "constraints": [
+      "不超出三年级认知",
+      "探究环节要能落地"
+    ],
+    "available_resource_candidates": [
+      "冷暖生活图",
+      "色卡",
+      "学习单感受记录格"
+    ],
+    "expected_target_sections": [
+      "analysis",
+      "teaching_process"
+    ],
+    "expected_impact_scope": [
+      "big_screen",
+      "handout",
+      "evidence_note"
+    ],
+    "expected_quality_level": "ready_to_teach"
+  },
+  {
+    "case_id": "standard_daily_task_too_easy",
+    "lesson_design_mode": "standard_daily",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "我担心只让学生涂冷暖色太简单，帮我把表现环节做得有一点挑战，但不要超纲。",
+    "student_baseline": "学生能涂色，也能模仿范例，但自主选择颜色表达感受还需要支架。",
+    "core_learning_problem": "把表现任务从机械涂色推进到有理由的色彩表达。",
+    "resource_budget": "medium",
+    "constraints": [
+      "不能变成专业色彩理论",
+      "要有分层选择"
+    ],
+    "available_resource_candidates": [
+      "情绪词卡",
+      "场景小题",
+      "学生作品范例"
+    ],
+    "expected_target_sections": [
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "handout",
+      "rubric",
+      "student_activity"
+    ],
+    "expected_quality_level": "ready_to_teach"
+  },
+  {
+    "case_id": "standard_daily_link_prior_work",
+    "lesson_design_mode": "standard_daily",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "学生上一课刚认识色彩，这节课要自然接上，不要像重新开始讲概念。",
+    "student_baseline": "学生上一课已经能辨认常见颜色和简单搭配，但还没有把颜色和情绪、场景联系起来。",
+    "core_learning_problem": "承接认识色彩，推进到色彩感受和表达理由。",
+    "resource_budget": "medium",
+    "constraints": [
+      "要承上启下",
+      "不要重复第一课内容"
+    ],
+    "available_resource_candidates": [
+      "上一课色彩记录",
+      "教材作品图",
+      "生活场景图"
+    ],
+    "expected_target_sections": [
+      "basis",
+      "analysis",
+      "teaching_process"
+    ],
+    "expected_impact_scope": [
+      "resource_reference",
+      "teacher_action",
+      "student_activity"
+    ],
+    "expected_quality_level": "ready_to_teach"
+  },
+  {
+    "case_id": "refined_lesson_question_chain",
+    "lesson_design_mode": "refined_lesson",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "我想把问题串磨细一点，让学生不是只回答冷色暖色，而是能说出为什么有这样的感觉。",
+    "student_baseline": "学生能跟着老师回答，但独立表达理由时容易短句化、空泛化。",
+    "core_learning_problem": "用连续问题推动学生从判断到说明理由。",
+    "resource_budget": "medium",
+    "constraints": [
+      "问题不宜过多",
+      "要留给创作时间"
+    ],
+    "available_resource_candidates": [
+      "作品图",
+      "色卡组合",
+      "表达句式支架"
+    ],
+    "expected_target_sections": [
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "teacher_action",
+      "big_screen",
+      "evidence_note"
+    ],
+    "expected_quality_level": "refined"
+  },
+  {
+    "case_id": "refined_lesson_differentiated_assignment",
+    "lesson_design_mode": "refined_lesson",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "作业要分层，让基础弱的孩子能完成，能力强的孩子也有发挥空间。",
+    "student_baseline": "班内绘画速度和表达能力差异较大，部分学生需要明确步骤，部分学生能自主创造场景。",
+    "core_learning_problem": "让不同层次学生都能用色彩表达感受，并保留适度挑战。",
+    "resource_budget": "medium",
+    "constraints": [
+      "任务分层但不割裂",
+      "评价标准要一致"
+    ],
+    "available_resource_candidates": [
+      "基础色块任务",
+      "场景表达任务",
+      "情绪色彩挑战任务"
+    ],
+    "expected_target_sections": [
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "handout",
+      "rubric",
+      "student_activity"
+    ],
+    "expected_quality_level": "refined"
+  },
+  {
+    "case_id": "open_class_student_expression",
+    "lesson_design_mode": "open_class",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "这节课要展示，学生表达和课堂证据要更清楚，大屏也要跟环节配合。",
+    "student_baseline": "学生愿意发言，但容易只说颜色名称，需要句式和可视化支架。",
+    "core_learning_problem": "让学生在公开课场景中清楚表达色彩感受、理由和作品选择。",
+    "resource_budget": "high",
+    "constraints": [
+      "大屏节奏要清楚",
+      "不能只追求表演感"
+    ],
+    "available_resource_candidates": [
+      "冷暖对比图片组",
+      "学生表达句式",
+      "课堂证据采集表"
+    ],
+    "expected_target_sections": [
+      "teaching_process",
+      "assessment",
+      "preparation"
+    ],
+    "expected_impact_scope": [
+      "big_screen",
+      "rubric",
+      "evidence_note"
+    ],
+    "expected_quality_level": "open_class_ready"
+  },
+  {
+    "case_id": "open_class_material_timing",
+    "lesson_design_mode": "open_class",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "材料什么时候发、学习单什么时候用、大屏什么时候切换，要帮我设计清楚。",
+    "student_baseline": "学生对材料很兴奋，如果过早发放会分散注意力。",
+    "core_learning_problem": "让材料、大屏和学习单服务于认知推进，而不是打断课堂。",
+    "resource_budget": "high",
+    "constraints": [
+      "材料发放要有时机",
+      "课堂秩序要稳定"
+    ],
+    "available_resource_candidates": [
+      "色卡包",
+      "学习单",
+      "大屏图片组",
+      "作品范例"
+    ],
+    "expected_target_sections": [
+      "preparation",
+      "teaching_process"
+    ],
+    "expected_impact_scope": [
+      "big_screen",
+      "handout",
+      "teacher_action"
+    ],
+    "expected_quality_level": "open_class_ready"
+  },
+  {
+    "case_id": "research_lesson_evidence_chain",
+    "lesson_design_mode": "research_lesson",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "我想研究学生怎么从说颜色好看，过渡到能说明颜色带来的感受。",
+    "student_baseline": "学生有颜色经验，但表达多停留在喜好判断，缺少理由链。",
+    "core_learning_problem": "观察学生从喜好表达走向感受表达和理由表达的过程。",
+    "resource_budget": "high",
+    "constraints": [
+      "不要写论文",
+      "要有可观察证据"
+    ],
+    "available_resource_candidates": [
+      "前测口头表达",
+      "学习单理由栏",
+      "作品说明",
+      "课堂观察记录"
+    ],
+    "expected_target_sections": [
+      "analysis",
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "evidence_note",
+      "rubric",
+      "teacher_action"
+    ],
+    "expected_quality_level": "refined"
+  },
+  {
+    "case_id": "constrained_no_projector",
+    "lesson_design_mode": "time_or_resource_constrained",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 40,
+    "teacher_input": "这节课可能没有投影，帮我改成不用大屏也能推进冷暖色理解。",
+    "student_baseline": "学生需要直观材料支持，单靠口头讲解容易理解偏浅。",
+    "core_learning_problem": "缺少投影时仍保留直观感受、分类和表达证据。",
+    "resource_budget": "low",
+    "constraints": [
+      "没有投影",
+      "只能用实物色卡和板书"
+    ],
+    "available_resource_candidates": [
+      "色卡",
+      "黑板分区",
+      "生活物品"
+    ],
+    "expected_target_sections": [
+      "preparation",
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "resource_reference",
+      "teacher_action",
+      "evidence_note"
+    ],
+    "expected_quality_level": "basic_usable"
+  },
+  {
+    "case_id": "constrained_30_minutes",
+    "lesson_design_mode": "time_or_resource_constrained",
+    "grade": "三年级",
+    "subject": "美术",
+    "unit": "色彩单元",
+    "lesson_code": "1-2",
+    "lesson_title": "色彩的感觉",
+    "duration_minutes": 30,
+    "teacher_input": "这周只有三十分钟，帮我压缩流程，但不要把学生表达和评价证据删掉。",
+    "student_baseline": "学生能快速进入涂色活动，但表达和回看常被时间压缩掉。",
+    "core_learning_problem": "在时间缩短时保留关键认知转换和证据。",
+    "resource_budget": "low",
+    "constraints": [
+      "30分钟",
+      "不牺牲表达和评价"
+    ],
+    "available_resource_candidates": [
+      "精选图片两张",
+      "小色卡",
+      "一句话表达卡"
+    ],
+    "expected_target_sections": [
+      "teaching_process",
+      "assessment"
+    ],
+    "expected_impact_scope": [
+      "teacher_action",
+      "student_activity",
+      "evidence_note"
+    ],
+    "expected_quality_level": "basic_usable"
+  }
+]

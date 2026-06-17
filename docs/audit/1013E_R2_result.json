@@ -1,0 +1,51 @@
+{
+  "stage_id": "1013E_R2B_MULTI_CASE_LESSON_REASONING_BENCHMARK",
+  "created_at": "2026-06-17T06:58:43+00:00",
+  "final_status": "DIAG_MULTI_CASE_REPAIR_REQUIRED",
+  "next_stage": "1013E_R3_CASE_BANK_AND_PROMPT_REPAIR",
+  "r2_repair_baseline": "STANDARD_DAILY_REPAIR_FAILED",
+  "provider_called": true,
+  "model_called": true,
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  },
+  "benchmark": {
+    "case_count": 12,
+    "raw_json_parse_pass_count": 6,
+    "strict_json_success_count": 6,
+    "overall_pass_count": 5,
+    "raw_contract_success_count": 5,
+    "normalized_contract_success_count": 6,
+    "empty_content_count": 6,
+    "markdown_fence_count": 0,
+    "schema_drift_count": 6,
+    "forbidden_side_effects_count": 6,
+    "average_quality_score": 2.48,
+    "low_quality_case_count": 6,
+    "average_target_resolution_score": 4.58,
+    "average_teaching_reasoning_score": 2.83,
+    "average_impact_scope_score": 2.92,
+    "average_quality_gate_score": 3.33,
+    "average_age_appropriateness_score": 4.17,
+    "all_pass_teacher_review_required": true,
+    "all_pass_formal_apply_false": true
+  },
+  "standard_daily_repair_success": false,
+  "case_result_file": "case_results_1013E_R2.json",
+  "case_bank_file": "lesson_reasoning_case_bank_1013E_R2.json",
+  "score_file": "benchmark_scores_1013E_R2.json",
+  "secret_scan_ok": true,
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  }
+}

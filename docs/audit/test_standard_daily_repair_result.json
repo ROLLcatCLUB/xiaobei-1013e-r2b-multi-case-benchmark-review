@@ -1,0 +1,167 @@
+{
+  "stage_id": "1013E_R2_STANDARD_DAILY_PROMPT_REPAIR_AND_UI_BINDING_READY_CHECK",
+  "case_id": "test_standard_daily_repair",
+  "lesson_design_mode": "standard_daily",
+  "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+  "strict_json_success": false,
+  "success": false,
+  "parser_mode": "strict_json_parser",
+  "parser_meta": {
+    "parser_mode": "strict_json_parser",
+    "parse_subcode": null,
+    "parse_error_code": null,
+    "raw_prefix_type": "json_object",
+    "provider_output_sanitized": false,
+    "extraction_required": false
+  },
+  "validation_errors": [
+    "target_0_not_object",
+    "target_1_not_object",
+    "patch_0_missing_target",
+    "patch_0_missing_target_field",
+    "patch_0_teacher_review_required_not_true",
+    "patch_0_formal_apply_not_false",
+    "patch_1_missing_target",
+    "patch_1_missing_target_field",
+    "patch_1_teacher_review_required_not_true",
+    "patch_1_formal_apply_not_false",
+    "step_reasoning_updates_missing_student_state_before",
+    "step_reasoning_updates_missing_student_state_after",
+    "impact_0_affected_object_invalid",
+    "impact_0_missing_summary",
+    "impact_0_confirmation_not_true",
+    "impact_1_affected_object_invalid",
+    "impact_1_missing_summary",
+    "impact_1_confirmation_not_true",
+    "impact_2_affected_object_invalid",
+    "impact_2_missing_summary",
+    "impact_2_confirmation_not_true",
+    "missing_impact_big_screen",
+    "missing_impact_handout",
+    "missing_impact_evidence_note",
+    "missing_analysis_patch",
+    "missing_explore_patch"
+  ],
+  "secret_scan_hits": [],
+  "provider_called": true,
+  "model_called": true,
+  "latency_ms": 38920,
+  "provider_meta": {
+    "provider": "openai_compatible",
+    "model": "MiniMax-M2.7-highspeed",
+    "base_url_host": "api.minimaxi.com",
+    "credential_source": "env",
+    "reasoning_split": false,
+    "latency_ms": 38920
+  },
+  "parsed_json": {
+    "lesson_design_mode": "直观体验型",
+    "intent_summary": "通过生活化情境和多感官体验，帮助三年级学生从表面喜好理解冷暖色的本质分类，能用自己的感受和理由对色彩进行冷暖区分。",
+    "lesson_design_brief_compact": {
+      "core_learning_problem": "学生对冷暖色的理解停留在表面喜好层面，缺乏对色彩温度属性的系统认知和分类依据的表达能力。",
+      "student_baseline": "大部分学生能说出颜色名称和基本喜好，但对冷暖色概念认知模糊，缺乏系统的色彩温度感知和分类能力。学生会说红色好看或蓝色凉爽等简单直观感受。",
+      "target_shift": "从仅能用喜好表达颜色，过渡到能通过身体感受描述和说出分类理由来区分冷暖色。",
+      "teaching_route": "大屏展示生活情境引入色卡实物体验分组操作学习单记录感受交流表达分类理由",
+      "evidence_plan": "通过色卡分组操作的准确率和学习单上感受记录的完整性，评价学生能否说出冷暖色的分类理由。",
+      "risk_points": "部分学生可能仍停留在颜色好不好看的层面，无法上升到感受描述。教师需要通过追问引导。",
+      "basis_summary": "三年级学生以具体形象思维为主，需要通过直观可感的材料和真实情境帮助理解抽象概念。冷暖色与学生生活经验紧密相关，易于建立情感连接。"
+    },
+    "target_resolution": [
+      "analysis",
+      "teaching_process/explore"
+    ],
+    "step_reasoning_updates": [
+      {
+        "step_id": "explore",
+        "teacher_action": "教师发放暖色卡和冷色卡各一组，提出开放性问题引导观察触摸，请学生分享感受并追问判断理由，组织色卡分类活动，收集典型发言作为评价依据。",
+        "student_action": "学生观察触摸色卡，用身体感受描述温度联想，尝试将色卡按冷暖分类，说出自己分类的理由，倾听并对比同伴的想法。",
+        "big_screen_state": "呈现生活场景中的冷暖色应用图片，如阳光下的沙滩与树荫下的草地，暖色食物与冷色饮品等。",
+        "learning_sheet_state": "学习单呈现感受记录格，学生用圆圈或打叉的方式标记触摸色卡时的冷热感受，旁边预留表达区域书写简短理由。",
+        "assessment_evidence": "学生能否说出冷暖色的分类理由，而不仅仅是表达喜好。色卡分组操作是否出现明显错误。"
+      }
+    ],
+    "field_patch_candidates": [
+      {
+        "field": "analysis",
+        "path": "student_baseline",
+        "patch": "大部分学生能说出颜色名称和基本喜好，但对冷暖色概念认知模糊，缺乏系统的色彩温度感知和分类能力",
+        "current_value": "学生对冷暖色不太理解",
+        "patch_value": "学生对冷暖色的理解停在表层，停留在颜色喜好层面"
+      },
+      {
+        "field": "teaching_process",
+        "path": "explore/student_activity",
+        "patch": "学生通过触摸观察色卡感受温度属性，尝试将色卡按冷暖分类，并用身体感受描述或简单词语表达分类理由",
+        "current_value": "要设计得更直观一点",
+        "patch_value": "用色卡实物让学生触摸感受，通过大屏生活图建立直观印象，用学习单感受记录格引导思考"
+      }
+    ],
+    "impact_scope": [
+      {
+        "type": "big_screen",
+        "content": "生活场景中的冷暖色图片，包括自然场景如阳光与阴影、季节对比，生活场景如室内暖光与户外冷色建筑，以及食物饮品冷暖色对比",
+        "purpose": "建立冷暖色与真实生活的联系，提供直观视觉感受"
+      },
+      {
+        "type": "handout",
+        "content": "色彩感觉学习单，包含触摸感受记录区用圆圈或叉标记冷热，色卡分类操作区粘贴或连线冷暖色，说理由表达区写简短感受",
+        "purpose": "记录学生学习过程，评估分类理由表达能力"
+      },
+      {
+        "type": "evidence_note",
+        "content": "课堂观察记录表，重点记录学生能否说出分类理由的关键发言，以及色卡分组的准确性表现",
+        "purpose": "形成性评价依据，为后续教学提供参考"
+      }
+    ],
+    "quality_gate_update": {
+      "level": "ready_to_teach",
+      "readiness_summary": "课程设计充分考虑了三年级学生的认知特点，通过大屏生活图色卡实物学习单三位一体的直观设计，有效解决冷暖色理解停留在表层的问题。评价标准明确指向说出分类理由，具备实施条件。"
+    },
+    "teacher_questions": [
+      "当你触摸这两种色卡时，身体有什么不同的感觉",
+      "你为什么会把这个颜色放在暖色这边",
+      "能不能用一句话说说你的理由",
+      "还有谁的想法不一样吗"
+    ],
+    "ui_binding_hint": {
+      "interaction_points": [
+        {
+          "screen": "big_screen",
+          "element": "冷暖生活场景图",
+          "trigger": "点击切换不同场景图片",
+          "feedback": "增强直观感受"
+        },
+        {
+          "screen": "learning_sheet",
+          "element": "感受记录格",
+          "trigger": "学生涂色或打标记",
+          "feedback": "呈现思考过程"
+        },
+        {
+          "screen": "teacher_device",
+          "element": "学生作品拍照按钮",
+          "trigger": "教师点击快速记录典型学习单",
+          "feedback": "积累评价证据"
+        }
+      ]
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    }
+  },
+  "boundary_flags": {
+    "teacher_review_required": true,
+    "formal_apply_performed": false,
+    "database_written": false,
+    "memory_written": false,
+    "feishu_written": false,
+    "formal_export_created": false,
+    "official_archive_created": false
+  }
+}

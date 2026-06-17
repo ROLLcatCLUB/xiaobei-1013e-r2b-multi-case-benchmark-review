@@ -1,0 +1,25 @@
+﻿{
+    "stage_id":  "1013E_R2B_MULTI_CASE_LESSON_REASONING_BENCHMARK",
+    "stage_name":  "1013E R2 Multi-Case Lesson Reasoning Benchmark",
+    "package_root":  "xiaobei-1013e-r2b-multi-case-benchmark-review",
+    "package_type":  "github_review_area",
+    "created_at":  "2026-06-17T09:15:40Z",
+    "files":  [
+                  "docs/audit/1013E_R2_result.json",
+                  "docs/audit/1013E_R2_report.md",
+                  "docs/audit/case_results_1013E_R2.json",
+                  "docs/audit/benchmark_scores_1013E_R2.json",
+                  "docs/audit/lesson_reasoning_case_bank_1013E_R2.json",
+                  "docs/audit/prompt_repair_1013E_R2.md",
+                  "docs/audit/prompt_repair_standard_daily_1013E_R2.md",
+                  "docs/audit/provider_metrics_1013E_R2.json",
+                  "docs/audit/redacted_provider_trace_1013E_R2.json",
+                  "docs/audit/standard_daily_repair_result_1013E_R2.json",
+                  "docs/audit/test_standard_daily_repair_result.json",
+                  "docs/review/PREP_ROOM_RENDER_CANVAS_DEEPEN_V1_README.md",
+                  "scripts/run_prep_room_1013e_r2_multi_case_benchmark.py",
+                  "backend/xiaobei_ai/prep_room_lesson_reasoning_contract_1013E.py",
+                  "README.md",
+                  ".gitattributes"
+              ]
+}

@@ -1,0 +1,9 @@
+# 1013E_R2 Standard Daily Prompt Repair
+
+## System Prompt
+
+你是师维备课室的小备，只输出一个 JSON 对象。不要 markdown，不要代码块，不要解释文字。只输出只读候选，不正式应用。
+
+## User Prompt
+
+{"stage_id":"1013E_R2_STANDARD_DAILY_PROMPT_REPAIR_AND_UI_BINDING_READY_CHECK","lesson":"三年级美术 色彩单元 1-2《色彩的感觉》 40分钟","teacher_input":"学生对冷暖色不太理解，要设计得更直观一点。","output_keys":["lesson_design_mode","intent_summary","lesson_design_brief_compact","target_resolution","step_reasoning_updates","field_patch_candidates","impact_scope","quality_gate_update","teacher_questions","ui_binding_hint","boundary_flags"],"field_types":{"lesson_design_brief_compact":"object，必须含 core_learning_problem student_baseline target_shift teaching_route evidence_plan risk_points basis_summary","target_resolution":"array，至少 analysis 和 teaching_process/explore 两项","step_reasoning_updates":"array，只写一个 object，step_id 必须是 explore","field_patch_candidates":"array，恰好两个 object","impact_scope":"array，恰好 big_screen handout evidence_note 三个 object","quality_gate_update":"object，level 用 ready_to_teach","teacher_questions":"array，可空","ui_binding_hint":"object","boundary_flags":"object"},"must_cover":{"step_reasoning_updates":"只写 explore 探究环节，含 teacher_action student_action big_screen_state learning_sheet_state assessment_evidence。","field_patch_candidates":"两条：analysis/student_baseline 与 teaching_process/explore/student_activity。","impact_scope":["big_screen","handout","evidence_note"],"quality_gate_level":"ready_to_teach","flags":{"teacher_review_required":true,"formal_apply_performed":false,"database_written":false,"memory_written":false,"feishu_written":false,"formal_export_created":false,"official_archive_created":false}},"content_hint":"学生能说颜色和喜好，但冷暖色理解停在表层。用大屏冷暖生活图、色卡分组、学习单感受记录格，评价学生能否说出分类理由。","json_rules":["只输出 JSON 对象，不要 markdown，不要代码块，不要解释。","不要写填空句，不要写下划线空格。","字符串里不要写英文双引号。","不要写 teacher_input content_hint field_path current_value patch_value 这些词。"]}

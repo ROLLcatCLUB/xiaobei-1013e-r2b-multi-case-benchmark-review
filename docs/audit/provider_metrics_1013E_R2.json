@@ -1,0 +1,29 @@
+{
+  "provider_called": true,
+  "model_called": true,
+  "case_count": 12,
+  "raw_json_parse_pass_count": 6,
+  "strict_json_success_count": 6,
+  "overall_pass_count": 5,
+  "raw_contract_success_count": 5,
+  "normalized_contract_success_count": 6,
+  "empty_content_count": 6,
+  "markdown_fence_count": 0,
+  "schema_drift_count": 6,
+  "forbidden_side_effects_count": 6,
+  "average_quality_score": 2.48,
+  "low_quality_case_count": 6,
+  "latency_summary": {
+    "count": 11,
+    "min_ms": 18971,
+    "max_ms": 26799,
+    "avg_ms": 23258
+  },
+  "provider_status": {
+    "provider_name": "openai_compatible",
+    "credential_available": true,
+    "credential_source": "env",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1"
+  }
+}

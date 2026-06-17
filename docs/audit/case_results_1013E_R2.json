@@ -1,0 +1,3016 @@
+[
+  {
+    "case_id": "quick_daily_basic_ready",
+    "lesson_design_mode": "quick_daily",
+    "teacher_input": "今天时间比较紧，先帮我把这节课整理成一版明天能上课的基本设计。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [],
+    "raw_coverage_errors": [
+      "missing_expected_section_analysis"
+    ],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 18971,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 18971
+    },
+    "parsed_json": {
+      "lesson_design_mode": "quick_daily",
+      "intent_summary": "整理基本教学设计",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "让学生能把颜色和感受联系起来，并说出简单理由",
+        "student_baseline": "学生能说出常见颜色，也能表达喜欢或不喜欢，但说理由时容易停在好看、漂亮",
+        "target_shift": "从会说好看到能说出简单感受理由",
+        "teaching_route": [
+          "观察色卡",
+          "说感受",
+          "连生活"
+        ],
+        "evidence_plan": [
+          "学生发言记录"
+        ],
+        "risk_points": [
+          "说不出感受",
+          "只会说好看"
+        ],
+        "basis_summary": "教材图和色卡组合使用"
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "teacher_action",
+          "reason": "添加引导语帮助学生把颜色和感受联系起来"
+        },
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "student_activity",
+          "reason": "设计说感受的固定句式支架"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "只能说出好看漂亮",
+          "student_state_after": "能说出冷暖或情绪感受",
+          "teacher_action": "出示色卡问感受",
+          "student_action": "看色卡说感受",
+          "big_screen_state": "展示色卡",
+          "learning_sheet_state": "记录感受词",
+          "assessment_evidence": "能说出冷暖或情绪词",
+          "risk_and_adjustment": "说不出来就示范"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "teacher_action",
+          "patch_type": "add_example",
+          "before_summary": "无引导语",
+          "after_candidate": "加上：这个颜色让你有什么感觉？",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "student_activity",
+          "patch_type": "simplify",
+          "before_summary": "自由说",
+          "after_candidate": "用句式：我觉得____，因为____",
+          "reasoning_basis": [
+            "小备推测"
+          ],
+          "impact_scope": [
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示色卡和生活图",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加说感受支架",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "记录感受词证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "环节完整",
+          "资源够用"
+        ],
+        "missing_items": [
+          "追问细节",
+          "评价标准"
+        ],
+        "risk_items": [
+          "时间紧张"
+        ],
+        "next_best_action": "确认基本设计后精细化"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "两处修改候选",
+        "candidate_display_position": "右侧候选栏",
+        "right_tray_updates": [
+          "p1添加引导语",
+          "p2添加句式支架"
+        ],
+        "view_mode_summary": "只读候选等确认"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "quick_daily",
+      "intent_summary": "整理基本教学设计",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "让学生能把颜色和感受联系起来，并说出简单理由",
+        "student_baseline": "学生能说出常见颜色，也能表达喜欢或不喜欢，但说理由时容易停在好看、漂亮",
+        "target_shift": "从会说好看到能说出简单感受理由",
+        "teaching_route": [
+          "观察色卡",
+          "说感受",
+          "连生活"
+        ],
+        "evidence_plan": [
+          "学生发言记录"
+        ],
+        "risk_points": [
+          "说不出感受",
+          "只会说好看"
+        ],
+        "basis_summary": [
+          "教材图和色卡组合使用"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "teacher_action",
+          "reason": "添加引导语帮助学生把颜色和感受联系起来"
+        },
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "student_activity",
+          "reason": "设计说感受的固定句式支架"
+        },
+        {
+          "section_id": "analysis",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "只能说出好看漂亮",
+          "student_state_after": "能说出冷暖或情绪感受",
+          "teacher_action": "出示色卡问感受",
+          "student_action": "看色卡说感受",
+          "big_screen_state": "展示色卡",
+          "learning_sheet_state": "记录感受词",
+          "assessment_evidence": "能说出冷暖或情绪词",
+          "risk_and_adjustment": "说不出来就示范"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "teacher_action",
+          "patch_type": "add_example",
+          "before_summary": "无引导语",
+          "after_candidate": "加上：这个颜色让你有什么感觉？",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "student_activity",
+          "patch_type": "simplify",
+          "before_summary": "自由说",
+          "after_candidate": "用句式：我觉得____，因为____",
+          "reasoning_basis": [
+            "小备推测"
+          ],
+          "impact_scope": [
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "quick_daily_basic_ready-p3",
+          "target_section": "analysis",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“让学生能把颜色和感受联系起来，并说出简单理由。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示色卡和生活图",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加说感受支架",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "记录感受词证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "环节完整",
+          "资源够用"
+        ],
+        "missing_items": [
+          "追问细节",
+          "评价标准"
+        ],
+        "risk_items": [
+          "时间紧张"
+        ],
+        "next_best_action": "确认基本设计后精细化"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "两处修改候选",
+        "candidate_display_position": "右侧候选栏",
+        "right_tray_updates": [
+          "p1添加引导语",
+          "p2添加句式支架"
+        ],
+        "view_mode_summary": "只读候选等确认"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "整理基本教学设计\n让学生能把颜色和感受联系起来，并说出简单理由\n学生能说出常见颜色，也能表达喜欢或不喜欢，但说理由时容易停在好看、漂亮\n从会说好看到能说出简单感受理由\n观察色卡\n说感受\n连生活\n学生发言记录\n说不出感受\n只会说好看\n教材图和色卡组合使用\nexplore\n探究\n只能说出好看漂亮\n能说出冷暖或情绪感受\n出示色卡问感受\n看色卡说感受\n展示色卡\n记录感受词\n能说出冷暖或情绪词\n说不出来就示范\np1\nteaching_process\nexplore\nteacher_action\nadd_example\n无引导语\n加上：这个颜色让你有什么感觉？\n教学预设\nbig_screen\nteacher_action\np2\nteaching_process\nexplore\nstudent_activity\nsimplify\n自由说\n用句式：我觉得____，因为____\n小备推测\nstudent_activity\nevidence_note\nquick_daily_basic_ready-p3\nanalysis\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“让学生能把颜色和感受联系起来，并说出简单理由。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nbig_screen\n展示色卡和生活图\nstudent_activity\n增加说感受支架\nevidence_note\n记录感受词证据\nbasic_usable\n环节完整\n资源够用\n追问细节\n评价标准\n时间紧张\n确认基本设计后精细化\n两处修改候选\n右侧候选栏\np1添加引导语\np2添加句式支架\n只读候选等确认",
+    "benchmark_score": {
+      "case_id": "quick_daily_basic_ready",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 4,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 4.8,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": true,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": true,
+      "raw_contract_success": true,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 0,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "missing_expected_section_analysis",
+        "schema_drift_detected"
+      ],
+      "repair_suggestion": "加强 expected_target_sections 与 expected_impact_scope 的显式约束。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 30215,
+        "raw_response_prefix_redacted": "{\n  \"lesson_design_mode\": \"quick_daily\",\n  \"intent_summary\": \"教师需快速整理明日可上课基本设计\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"让学生能把颜色和感受联系起来，并说出简单理由\",\n    \"student_baseline\": \"能说颜色和喜恶，但理由停在好看、漂亮\",\n    \"target_shift\": \"从'好看'到说出'冷/暖/安静/热闹'等感受词\",\n    \"teaching_route\": [\"导入感受\", \"看图联想\", \"色卡对应\", \"表达分享\"],\n    \"evidence_plan\": \"学生能用'我觉得X色让我感觉Y'表达\",\n    \"risk_points\": \"学生词汇有限，需提供感受词卡\",\n    \"basis_summary\": \"色彩单元第一课时，教材图+生活图片+色卡\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"explore\",\n      \"target_field\": \"explore_design\",\n      \"reason\": \"教师要求少追问，降低探究难度\"\n    },\n    {\n      \"section_id\": \"analysis\",\n      \"step_id\": \"\",\n      \"target_field\": \"goals\",\n      \"reason\": \"目标简化适应40分钟快节奏\"\n    }\n  ],\n  \"step_reasoning_updates\": [\n    {\n   "
+      },
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 18971,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"quick_daily\",\"intent_summary\":\"整理基本教学设计\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"让学生能把颜色和感受联系起来，并说出简单理由\",\"student_baseline\":\"学生能说出常见颜色，也能表达喜欢或不喜欢，但说理由时容易停在好看、漂亮\",\"target_shift\":\"从会说好看到能说出简单感受理由\",\"teaching_route\":[\"观察色卡\",\"说感受\",\"连生活\"],\"evidence_plan\":[\"学生发言记录\"],\"risk_points\":[\"说不出感受\",\"只会说好看\"],\"basis_summary\":\"教材图和色卡组合使用\"},\"target_resolution\":[{\"section_id\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"teacher_action\",\"reason\":\"添加引导语帮助学生把颜色和感受联系起来\"},{\"section_id\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"student_activity\",\"reason\":\"设计说感受的固定句式支架\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"只能说出好看漂亮\",\"student_state_after\":\"能说出冷暖或情绪感受\",\"teacher_action\":\"出示色卡问感受\",\"student_action\":\"看色卡说感受\",\"b"
+      }
+    ]
+  },
+  {
+    "case_id": "quick_daily_no_print",
+    "lesson_design_mode": "quick_daily",
+    "teacher_input": "今天不能打印学习单，帮我把探究和评价改成不用纸也能完成。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [],
+    "raw_coverage_errors": [
+      "missing_expected_section_preparation"
+    ],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 20787,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 20787
+    },
+    "parsed_json": {
+      "lesson_design_mode": "quick_daily",
+      "intent_summary": "无纸化探究评价改法",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "无纸质学习单下保留表达评价证据",
+        "student_baseline": "愿看图说感受，记录习惯不稳定",
+        "target_shift": "探究评价从纸笔转口头影像",
+        "teaching_route": [
+          "看大屏说感受",
+          "口头表述替代写",
+          "拍照记录证据"
+        ],
+        "evidence_plan": "教师拍照+口述转板书",
+        "risk_points": "口头表述证据难量化",
+        "basis_summary": "大屏替代纸，影像替代笔"
+      },
+      "target_resolution": [
+        {
+          "section": "teaching_process",
+          "step_id": "explore",
+          "target_field": "explore_activity",
+          "reason": "口头表述替代纸笔记录，学生说教师记板书"
+        },
+        {
+          "section": "assessment",
+          "step_id": "share",
+          "target_field": "assessment_evidence",
+          "reason": "拍照记录替代纸质评价表"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "看图想记不知怎么写",
+          "student_state_after": "看图直接说，教师写板书",
+          "teacher_action": "组织看大屏，引导说色彩感受，同步写板书",
+          "student_action": "看大屏图片，口头描述色彩感受",
+          "big_screen_state": "展示色彩对比图片",
+          "learning_sheet_state": "无",
+          "assessment_evidence": "板书记载+教师拍照",
+          "risk_and_adjustment": "说不到点时教师追问引导"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "student_activity",
+          "patch_type": "restructure",
+          "before_summary": "看学习单找信息记录",
+          "after_candidate": "看大屏口述感受，教师板书",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "assessment",
+          "target_step_id": "share",
+          "target_field": "assessment_evidence",
+          "patch_type": "revise",
+          "before_summary": "纸质评价表打勾",
+          "after_candidate": "拍照记录作品+口头评价",
+          "reasoning_basis": [
+            "资源候选"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "探究展示主图替代纸单",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "拍照记录替代纸质证据",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "边听边写板书代替发纸收纸",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "无纸化探究方案",
+          "影像记录替代纸笔"
+        ],
+        "missing_items": [
+          "口头评价标准细化"
+        ],
+        "risk_items": [
+          "口头证据难量化"
+        ],
+        "next_best_action": "确认大屏图片和拍照流程"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "探究评价无纸化",
+        "candidate_display_position": "板书和拍照方案",
+        "right_tray_updates": [
+          "板书记录",
+          "拍照记录"
+        ],
+        "view_mode_summary": "口头影像备选"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "quick_daily",
+      "intent_summary": "无纸化探究评价改法",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "无纸质学习单下保留表达评价证据",
+        "student_baseline": "愿看图说感受，记录习惯不稳定",
+        "target_shift": "探究评价从纸笔转口头影像",
+        "teaching_route": [
+          "看大屏说感受",
+          "口头表述替代写",
+          "拍照记录证据"
+        ],
+        "evidence_plan": [
+          "教师拍照+口述转板书"
+        ],
+        "risk_points": [
+          "口头表述证据难量化"
+        ],
+        "basis_summary": [
+          "大屏替代纸，影像替代笔"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "explore_activity",
+          "reason": "口头表述替代纸笔记录，学生说教师记板书"
+        },
+        {
+          "section_id": "teaching_process",
+          "step_id": "share",
+          "target_field": "assessment_evidence",
+          "reason": "拍照记录替代纸质评价表"
+        },
+        {
+          "section_id": "preparation",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "看图想记不知怎么写",
+          "student_state_after": "看图直接说，教师写板书",
+          "teacher_action": "组织看大屏，引导说色彩感受，同步写板书",
+          "student_action": "看大屏图片，口头描述色彩感受",
+          "big_screen_state": "展示色彩对比图片",
+          "learning_sheet_state": "无",
+          "assessment_evidence": "板书记载+教师拍照",
+          "risk_and_adjustment": "说不到点时教师追问引导"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "student_activity",
+          "patch_type": "restructure",
+          "before_summary": "看学习单找信息记录",
+          "after_candidate": "看大屏口述感受，教师板书",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "assessment",
+          "target_step_id": "share",
+          "target_field": "assessment_evidence",
+          "patch_type": "revise",
+          "before_summary": "纸质评价表打勾",
+          "after_candidate": "拍照记录作品+口头评价",
+          "reasoning_basis": [
+            "资源候选"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "quick_daily_no_print-p3",
+          "target_section": "preparation",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“在没有纸质学习单的条件下保留表达和评价证据。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "探究展示主图替代纸单",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "拍照记录替代纸质证据",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "边听边写板书代替发纸收纸",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "无纸化探究方案",
+          "影像记录替代纸笔"
+        ],
+        "missing_items": [
+          "口头评价标准细化"
+        ],
+        "risk_items": [
+          "口头证据难量化"
+        ],
+        "next_best_action": "确认大屏图片和拍照流程"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "探究评价无纸化",
+        "candidate_display_position": "板书和拍照方案",
+        "right_tray_updates": [
+          "板书记录",
+          "拍照记录"
+        ],
+        "view_mode_summary": "口头影像备选"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "无纸化探究评价改法\n无纸质学习单下保留表达评价证据\n愿看图说感受，记录习惯不稳定\n探究评价从纸笔转口头影像\n看大屏说感受\n口头表述替代写\n拍照记录证据\n教师拍照+口述转板书\n口头表述证据难量化\n大屏替代纸，影像替代笔\nexplore\n探究\n看图想记不知怎么写\n看图直接说，教师写板书\n组织看大屏，引导说色彩感受，同步写板书\n看大屏图片，口头描述色彩感受\n展示色彩对比图片\n无\n板书记载+教师拍照\n说不到点时教师追问引导\np1\nteaching_process\nexplore\nstudent_activity\nrestructure\n看学习单找信息记录\n看大屏口述感受，教师板书\n教学预设\nbig_screen\nteacher_action\np2\nassessment\nshare\nassessment_evidence\nrevise\n纸质评价表打勾\n拍照记录作品+口头评价\n资源候选\nevidence_note\nteacher_action\nquick_daily_no_print-p3\npreparation\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“在没有纸质学习单的条件下保留表达和评价证据。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nbig_screen\n探究展示主图替代纸单\nevidence_note\n拍照记录替代纸质证据\nteacher_action\n边听边写板书代替发纸收纸\nbasic_usable\n无纸化探究方案\n影像记录替代纸笔\n口头评价标准细化\n口头证据难量化\n确认大屏图片和拍照流程\n探究评价无纸化\n板书和拍照方案\n板书记录\n拍照记录\n口头影像备选",
+    "benchmark_score": {
+      "case_id": "quick_daily_no_print",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 5,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 5.0,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": true,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": true,
+      "raw_contract_success": true,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 0,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "missing_expected_section_preparation",
+        "schema_drift_detected"
+      ],
+      "repair_suggestion": "加强 expected_target_sections 与 expected_impact_scope 的显式约束。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 28938,
+        "raw_response_prefix_redacted": "{\n  \"lesson_design_mode\": \"quick_daily\",\n  \"intent_summary\": \"将探究和评价改为无纸化，用口头表达和教师拍照记录替代纸质学习单\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"无纸质学习单条件下保留表达和评价证据\",\n    \"student_baseline\": \"学生愿意看图说感受，记录习惯不稳定\",\n    \"target_shift\": \"口头表达+教师拍照记录替代纸笔\",\n    \"teaching_route\": [\"看图\", \"说感受\", \"大屏展示\", \"口头评价\", \"教师记录\"],\n    \"evidence_plan\": \"教师拍照记录学生口头表达证据\",\n    \"risk_points\": \"口头表达不够具体，教师记录工作量大\",\n    \"basis_summary\": \"大屏图片+手机拍照+板书关键词\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"explore\",\n      \"target_field\": \"explore_activity_design\",\n      \"reason\": \"探究环节从纸笔记录改为口头表达+教师拍照\"\n    },\n    {\n      \"section_id\": \"assessment\",\n      \"step_id\": \"share\",\n      \"target_field\": \"evaluation_method\",\n      \"reason\": \"评价环节改为口头互评+拍照记录\"\n    }\n  ],\n  "
+      },
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 20787,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"quick_daily\",\"intent_summary\":\"无纸化探究评价改法\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"无纸质学习单下保留表达评价证据\",\"student_baseline\":\"愿看图说感受，记录习惯不稳定\",\"target_shift\":\"探究评价从纸笔转口头影像\",\"teaching_route\":[\"看大屏说感受\",\"口头表述替代写\",\"拍照记录证据\"],\"evidence_plan\":\"教师拍照+口述转板书\",\"risk_points\":\"口头表述证据难量化\",\"basis_summary\":\"大屏替代纸，影像替代笔\"},\"target_resolution\":[{\"section\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"explore_activity\",\"reason\":\"口头表述替代纸笔记录，学生说教师记板书\"},{\"section\":\"assessment\",\"step_id\":\"share\",\"target_field\":\"assessment_evidence\",\"reason\":\"拍照记录替代纸质评价表\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"看图想记不知怎么写\",\"student_state_after\":\"看图直接说，教师写板书\",\"teacher_action\":\"组织看大屏，引导说色彩感受，同步写板书\",\"student_action\":\"看大屏图片，口头描述色彩感受\",\"big_screen_st"
+      }
+    ]
+  },
+  {
+    "case_id": "standard_daily_cold_warm_more_visual",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "学生对冷暖色不太理解，要设计得更直观一点。",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "parser_mode": "json_parse_error",
+    "parser_meta": {
+      "parser_mode": "json_parse_error",
+      "parse_subcode": "invalid_json_output",
+      "parse_error_code": "json_parse_error",
+      "raw_prefix_type": null,
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "json_parse_error"
+    ],
+    "raw_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "raw_coverage_errors": [
+      "payload_not_object"
+    ],
+    "normalized_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "normalized_coverage_errors": [
+      "payload_not_object"
+    ],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 24882,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 24882
+    },
+    "parsed_json": null,
+    "normalized_json": null,
+    "teacher_visible_summary": "",
+    "benchmark_score": {
+      "case_id": "standard_daily_cold_warm_more_visual",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 1,
+      "impact_scope_score": 1,
+      "quality_gate_score": 2,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 4,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": false,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 1,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "payload_not_object",
+        "parse_error_json_parse_error",
+        "parsed_result_not_object",
+        "payload_not_object",
+        "empty_content",
+        "forbidden_side_effects",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 21228,
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_design_mode\": \"standard_daily\",\n  \"intent_summary\": \"将冷暖色抽象概念转化为色卡操作和感受记录\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"帮助学生从颜色喜好转向用温暖、清凉等感受分类并说明理由\",\n    \"student_baseline\": \"学生知道红、黄、蓝等颜色，也会说喜欢，但冷暖色理解停在表层\",\n    \"target_shift\": \"从表面喜好到感受分类并能说明理由\",\n    \"teaching_route\": [\"生活图引入\", \"色卡感知\", \"感受分类记录\", \"分享理由\"],\n    \"evidence_plan\": \"学习单感受"
+      },
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 24882,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"冷暖直观化落地探究\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"帮助学生从颜色喜好转向用温暖、清凉等感受分类并说明理由\",\"student_baseline\":\"学生知道红黄蓝色会说喜欢但冷暖理解表层\",\"target_shift\":\"能从感受角度给色彩分类\",\"teaching_route\":[\"生活图引入\",\"感受色卡\",\"小组分类说明\"],\"evidence_plan\":[\"学习单记录感受\",\"小组展示\"],\"risk_points\":[\"三年级表达有限\"],\"basis_summary\":\"直观感受优先于抽象概念\"},\"target_resolution\":[{\"section\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"activity_sequence\",\"reason\":\"学生难从喜好转向感受分类\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"能说喜欢什么颜色\",\"student_state_after\":\"能感受并说理由\",\"teacher_action\":\"提问引导\",\"student_action\":\"分类并说明\",\"big_screen_state\":\"冷暖生活图\",\"learning_sheet_state\":\"感受记录格\",\"assessment_evidence\":\"表达流畅度\",\"risk_and_adjustment\":\"表达困难可用肢体\"}],\"field_p"
+      }
+    ]
+  },
+  {
+    "case_id": "standard_daily_task_too_easy",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "我担心只让学生涂冷暖色太简单，帮我把表现环节做得有一点挑战，但不要超纲。",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "parser_mode": "json_parse_error",
+    "parser_meta": {
+      "parser_mode": "json_parse_error",
+      "parse_subcode": "invalid_json_output",
+      "parse_error_code": "json_parse_error",
+      "raw_prefix_type": null,
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "json_parse_error"
+    ],
+    "raw_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "raw_coverage_errors": [
+      "payload_not_object"
+    ],
+    "normalized_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "normalized_coverage_errors": [
+      "payload_not_object"
+    ],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 23183,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 23183
+    },
+    "parsed_json": null,
+    "normalized_json": null,
+    "teacher_visible_summary": "",
+    "benchmark_score": {
+      "case_id": "standard_daily_task_too_easy",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 1,
+      "impact_scope_score": 1,
+      "quality_gate_score": 2,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 4,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": false,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 1,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "payload_not_object",
+        "parse_error_json_parse_error",
+        "parsed_result_not_object",
+        "payload_not_object",
+        "empty_content",
+        "forbidden_side_effects",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 24847,
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_design_mode\": \"standard_daily\",\n  \"intent_summary\": \"表现环节增加选择支架，引导学生有理由地表达色彩感受\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"从机械涂色推进到有理由的色彩表达\",\n    \"student_baseline\": \"能涂色能模仿，自主选择颜色表达感受需支架\",\n    \"target_shift\": \"从无选择涂色→带理由的色彩选择\",\n    \"teaching_route\": [\"感知冷暖→探究搭配→表现创作→交流分享\"],\n    \"evidence_plan\": [\"学生能说出选色理由\"],\n    \"risk_points\": [\"理由表达流于形式\"],\n    \"basis_summary\": \"情绪词卡提供选择支架，场景小题引导感受联想\"\n  },\n  \"target_resolution\": [\n    {\n      \"section\": \"teaching_process\",\n      \"step_id\": \"make\",\n      \"target_field\": \"表现任务描述\",\n      \"reason\": \"加入选择支架，使表现任务从机械涂色升级为有理由的色彩表达\"\n    },\n    {\n      \"section\": \"assessment\",\n      \"step_id\": \"\",\n      \"target_field\": \"评价标准\",\n      \"reason\": \"补充色彩选择理由的评估要点，匹配表现任务升级\"\n    }\n  ],\n  \"step_reasoning_updates\": [\n    {\n      \""
+      },
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 23183,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"在表现环节加入理由支架，用情绪词卡和场景小题分层引导，帮助学生从机械涂色升级为有理由的色彩表达。\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"把表现任务从机械涂色推进到有理由的色彩表达\",\"student_baseline\":\"能涂色模仿但自主选择颜色表达感受需支架\",\"target_shift\":\"从模仿涂色升级为有理由的色彩表达\",\"teaching_route\":[\"感知冷暖色→探究色彩情感→表现环节分层挑战→同伴互评\"],\"evidence_plan\":[\"学生说出色彩选择理由\",\"作业呈现色彩与情绪对应\"],\"risk_points\":\"分层任务可能增加部分学生压力\",\"basis_summary\":\"依据课标色彩情感表现要求，结合资源候选设计分层选择\"},\"target_resolution\":[{\"section_id\":\"teaching_process\",\"step_id\":\"make\",\"target_field\":\"student_activity\",\"reason\":\"在表现环节增加从情绪词卡选词再对应色彩的二层选择结构，既有支架又不超纲\"},{\"section_id\":\"assessment\",\"step_id\":\"\",\"target_field\":\"evidence_note\",\"reason\":\"增加色彩选择理由的口头表达作为评价证据，检测是否有理由的色彩表达\"}],\"step_reasoning_updates\":[{\"step_id\":\"make\",\"step_name\":\"表现\",\"student_state_before\":\"能模仿涂色但不知为何选这个颜色"
+      }
+    ]
+  },
+  {
+    "case_id": "standard_daily_link_prior_work",
+    "lesson_design_mode": "standard_daily",
+    "teacher_input": "学生上一课刚认识色彩，这节课要自然接上，不要像重新开始讲概念。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 1,
+    "attempt_parser_modes": [
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [],
+    "raw_coverage_errors": [
+      "missing_expected_impact_resource_reference"
+    ],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 26799,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 26799
+    },
+    "parsed_json": {
+      "lesson_design_mode": "standard_daily",
+      "intent_summary": "承接色彩识别，推进色彩情感表达",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "承接认识色彩，推进到色彩感受和表达理由",
+        "student_baseline": "能辨认常见颜色和简单搭配，未把颜色和情绪场景联系",
+        "target_shift": "从颜色识别到色彩情感表达",
+        "teaching_route": "情境感受→色彩体验→表达分享",
+        "evidence_plan": "学生能说出颜色对应的情绪",
+        "risk_points": "避免抽象概念讲解",
+        "basis_summary": "基于上一课色彩记录衔接"
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "探索活动",
+          "reason": "增加色彩情绪关联体验活动"
+        },
+        {
+          "section_id": "basis",
+          "step_id": "",
+          "target_field": "资源引用",
+          "reason": "引入生活场景图辅助情感联想"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "能辨认颜色但未关联情感",
+          "student_state_after": "能表达色彩对应情绪",
+          "teacher_action": "提问引导色彩感受联想",
+          "student_action": "小组分享颜色感受",
+          "big_screen_state": "展示生活场景图",
+          "learning_sheet_state": "记录颜色情绪词",
+          "assessment_evidence": "语言表达记录",
+          "risk_and_adjustment": "控制抽象概念讲解"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "探索活动",
+          "patch_type": "add_example",
+          "before_summary": "缺乏色彩情感引导活动",
+          "after_candidate": "增加颜色-情绪配对体验活动",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "analysis",
+          "target_step_id": "",
+          "target_field": "学情分析",
+          "patch_type": "enrich",
+          "before_summary": "缺少色彩情绪认知起点分析",
+          "after_candidate": "补充色彩情绪认知起点描述",
+          "reasoning_basis": [
+            "学生特征推测"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示生活场景图辅助情感联想",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "增加引导色彩感受提问",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加颜色情绪记录活动",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "ready_to_teach",
+        "passed_items": [
+          "承接上节课色彩记录",
+          "增加色彩情绪体验",
+          "明确目标转移"
+        ],
+        "missing_items": [],
+        "risk_items": [
+          "学生抽象表达可能不足"
+        ],
+        "next_best_action": "准备颜色情绪词汇表备用"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "explore_step",
+        "candidate_display_position": "右侧面板",
+        "right_tray_updates": [
+          "step_reasoning_updates",
+          "field_patch_candidates"
+        ],
+        "view_mode_summary": "探究环节补丁待确认"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "standard_daily",
+      "intent_summary": "承接色彩识别，推进色彩情感表达",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "承接认识色彩，推进到色彩感受和表达理由",
+        "student_baseline": "能辨认常见颜色和简单搭配，未把颜色和情绪场景联系",
+        "target_shift": "从颜色识别到色彩情感表达",
+        "teaching_route": [
+          "情境感受→色彩体验→表达分享"
+        ],
+        "evidence_plan": [
+          "学生能说出颜色对应的情绪"
+        ],
+        "risk_points": [
+          "避免抽象概念讲解"
+        ],
+        "basis_summary": [
+          "基于上一课色彩记录衔接"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "explore",
+          "target_field": "探索活动",
+          "reason": "增加色彩情绪关联体验活动"
+        },
+        {
+          "section_id": "basis",
+          "step_id": "",
+          "target_field": "资源引用",
+          "reason": "引入生活场景图辅助情感联想"
+        },
+        {
+          "section_id": "analysis",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "能辨认颜色但未关联情感",
+          "student_state_after": "能表达色彩对应情绪",
+          "teacher_action": "提问引导色彩感受联想",
+          "student_action": "小组分享颜色感受",
+          "big_screen_state": "展示生活场景图",
+          "learning_sheet_state": "记录颜色情绪词",
+          "assessment_evidence": "语言表达记录",
+          "risk_and_adjustment": "控制抽象概念讲解"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "探索活动",
+          "patch_type": "add_example",
+          "before_summary": "缺乏色彩情感引导活动",
+          "after_candidate": "增加颜色-情绪配对体验活动",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "big_screen",
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "analysis",
+          "target_step_id": "",
+          "target_field": "学情分析",
+          "patch_type": "enrich",
+          "before_summary": "缺少色彩情绪认知起点分析",
+          "after_candidate": "补充色彩情绪认知起点描述",
+          "reasoning_basis": [
+            "学生特征推测"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "standard_daily_link_prior_work-p3",
+          "target_section": "basis",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“承接认识色彩，推进到色彩感受和表达理由。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "展示生活场景图辅助情感联想",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "增加引导色彩感受提问",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加颜色情绪记录活动",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "resource_reference",
+          "impact_summary": "资料只作为候选依据，需教师确认是否适合本班。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "ready_to_teach",
+        "passed_items": [
+          "承接上节课色彩记录",
+          "增加色彩情绪体验",
+          "明确目标转移"
+        ],
+        "missing_items": [],
+        "risk_items": [
+          "学生抽象表达可能不足"
+        ],
+        "next_best_action": "准备颜色情绪词汇表备用"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "explore_step",
+        "candidate_display_position": "右侧面板",
+        "right_tray_updates": [
+          "step_reasoning_updates",
+          "修改候选"
+        ],
+        "view_mode_summary": "探究环节补丁待确认"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "承接色彩识别，推进色彩情感表达\n承接认识色彩，推进到色彩感受和表达理由\n能辨认常见颜色和简单搭配，未把颜色和情绪场景联系\n从颜色识别到色彩情感表达\n情境感受→色彩体验→表达分享\n学生能说出颜色对应的情绪\n避免抽象概念讲解\n基于上一课色彩记录衔接\nexplore\n探究\n能辨认颜色但未关联情感\n能表达色彩对应情绪\n提问引导色彩感受联想\n小组分享颜色感受\n展示生活场景图\n记录颜色情绪词\n语言表达记录\n控制抽象概念讲解\np1\nteaching_process\nexplore\n探索活动\nadd_example\n缺乏色彩情感引导活动\n增加颜色-情绪配对体验活动\n教学预设\nbig_screen\nteacher_action\nstudent_activity\np2\nanalysis\n\n学情分析\nenrich\n缺少色彩情绪认知起点分析\n补充色彩情绪认知起点描述\n学生特征推测\nteacher_action\nstudent_activity\nstandard_daily_link_prior_work-p3\nbasis\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“承接认识色彩，推进到色彩感受和表达理由。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nbig_screen\n展示生活场景图辅助情感联想\nteacher_action\n增加引导色彩感受提问\nstudent_activity\n增加颜色情绪记录活动\nresource_reference\n资料只作为候选依据，需教师确认是否适合本班。\nready_to_teach\n承接上节课色彩记录\n增加色彩情绪体验\n明确目标转移\n学生抽象表达可能不足\n准备颜色情绪词汇表备用\nexplore_step\n右侧面板\nstep_reasoning_updates\n修改候选\n探究环节补丁待确认",
+    "benchmark_score": {
+      "case_id": "standard_daily_link_prior_work",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 5,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 5.0,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": true,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": true,
+      "raw_contract_success": true,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 0,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "missing_expected_impact_resource_reference",
+        "schema_drift_detected"
+      ],
+      "repair_suggestion": "加强 expected_target_sections 与 expected_impact_scope 的显式约束。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 26799,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"standard_daily\",\"intent_summary\":\"承接色彩识别，推进色彩情感表达\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"承接认识色彩，推进到色彩感受和表达理由\",\"student_baseline\":\"能辨认常见颜色和简单搭配，未把颜色和情绪场景联系\",\"target_shift\":\"从颜色识别到色彩情感表达\",\"teaching_route\":\"情境感受→色彩体验→表达分享\",\"evidence_plan\":\"学生能说出颜色对应的情绪\",\"risk_points\":\"避免抽象概念讲解\",\"basis_summary\":\"基于上一课色彩记录衔接\"},\"target_resolution\":[{\"section_id\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"探索活动\",\"reason\":\"增加色彩情绪关联体验活动\"},{\"section_id\":\"basis\",\"step_id\":\"\",\"target_field\":\"资源引用\",\"reason\":\"引入生活场景图辅助情感联想\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"能辨认颜色但未关联情感\",\"student_state_after\":\"能表达色彩对应情绪\",\"teacher_action\":\"提问引导色彩感受联想\",\"student_action\":\"小组分享颜色感受\",\"big_screen_state\":\"展示生活场景图\",\"learning_sheet_state\":\"记"
+      }
+    ]
+  },
+  {
+    "case_id": "refined_lesson_question_chain",
+    "lesson_design_mode": "refined_lesson",
+    "teacher_input": "我想把问题串磨细一点，让学生不是只回答冷色暖色，而是能说出为什么有这样的感觉。",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "parser_mode": "json_parse_error",
+    "parser_meta": {
+      "parser_mode": "json_parse_error",
+      "parse_subcode": "invalid_json_output",
+      "parse_error_code": "json_parse_error",
+      "raw_prefix_type": null,
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "json_parse_error"
+    ],
+    "raw_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "raw_coverage_errors": [
+      "payload_not_object"
+    ],
+    "normalized_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "normalized_coverage_errors": [
+      "payload_not_object"
+    ],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 24267,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 24267
+    },
+    "parsed_json": null,
+    "normalized_json": null,
+    "teacher_visible_summary": "",
+    "benchmark_score": {
+      "case_id": "refined_lesson_question_chain",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 1,
+      "impact_scope_score": 1,
+      "quality_gate_score": 2,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 4,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": false,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 1,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "payload_not_object",
+        "parse_error_json_parse_error",
+        "parsed_result_not_object",
+        "payload_not_object",
+        "empty_content",
+        "forbidden_side_effects",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 31880,
+        "raw_response_prefix_redacted": "{\n  \"lesson_design_mode\": \"refined_lesson\",\n  \"intent_summary\": \"细化问题串，引导学生从判断冷暖色到说明色彩感觉理由\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"学生能判断冷暖色但不会说明理由\",\n    \"student_baseline\": \"跟着能回答，独立表达短句空泛\",\n    \"target_shift\": \"从“这是暖色”到“我感到温暖因为...”\",\n    \"teaching_route\": \"观察色卡→联系生活→用句式支架表达\",\n    \"evidence_plan\": \"观察学生能否用句式完整表达\",\n    \"risk_points\": \"问题过多挤压创作时间\",\n    \"basis_summary\": \"依托色彩单元和生活经验联系\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"explore\",\n      \"target_field\": \"teacher_questions\",\n      \"reason\": \"把笼统追问改为递进式示范，引导学生从判断到说明\"\n    },\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"make\",\n      \"target_field\": \"student_activity\",\n      \"reason\": \"加入句式支架，帮助学生结构化表达色彩感觉理由\"\n    }\n  ],\n  \"step_reasoning_updates\""
+      },
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 24267,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"refined_lesson\",\"intent_summary\":\"把问题串磨细，引导学生从判断冷暖色到说出感受理由\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"用连续问题推动学生从判断到说明理由\",\"student_baseline\":\"学生能跟着老师回答，但独立表达理由时容易短句化、空泛化\",\"target_shift\":\"从被动回答冷暖色到主动阐述感受理由\",\"teaching_route\":[\"展示作品→连续追问→支架填空→创作表现\"],\"evidence_plan\":[\"学习单记录理由表达\"],\"risk_points\":[\"问题过多挤压创作时间\"],\"basis_summary\":\"问题串细化需兼顾深度与数量平衡\"},\"target_resolution\":[{\"section\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"教师问题设计\",\"reason\":\"需设计连续追问替代单一冷暖色判断\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"能回答冷暖色但说不清原因\",\"student_state_after\":\"能用理由说明色彩感受\",\"teacher_action\":\"连续追问：你怎么觉得？比如什么情况？\",\"student_action\":\"借助支架说出理由\",\"big_screen_state\":\"展示作品图\",\"learning_sheet_state\":\"记录理由\",\"assessment_evidence\":\"表达是否有理由支撑\",\"ris"
+      }
+    ]
+  },
+  {
+    "case_id": "refined_lesson_differentiated_assignment",
+    "lesson_design_mode": "refined_lesson",
+    "teacher_input": "作业要分层，让基础弱的孩子能完成，能力强的孩子也有发挥空间。",
+    "strict_json_success": false,
+    "provider_called": true,
+    "model_called": true,
+    "parser_mode": "provider_error",
+    "error_message_redacted": "Provider returned empty message content.",
+    "benchmark_score": {
+      "case_id": "refined_lesson_differentiated_assignment",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 0,
+      "teaching_reasoning_score": 0,
+      "impact_scope_score": 0,
+      "quality_gate_score": 0,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 0,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 0,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "provider_response_invalid"
+      ],
+      "repair_suggestion": "检查 provider 可用性或降低单次输出长度。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "secret_scan_hits": []
+  },
+  {
+    "case_id": "open_class_student_expression",
+    "lesson_design_mode": "open_class",
+    "teacher_input": "这节课要展示，学生表达和课堂证据要更清楚，大屏也要跟环节配合。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 1,
+    "attempt_parser_modes": [
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [],
+    "raw_coverage_errors": [
+      "missing_expected_section_preparation",
+      "missing_expected_impact_rubric"
+    ],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 23428,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 23428
+    },
+    "parsed_json": {
+      "lesson_design_mode": "open_class",
+      "intent_summary": "公开课展示要清楚，学生表达需支架，证据采集要规范",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生清楚表达色彩感受和作品选择",
+        "student_baseline": "愿发言但只说颜色名称",
+        "target_shift": "从说颜色到说感受理由",
+        "teaching_route": "感知-探究-表现-交流展示",
+        "evidence_plan": "采集表达句式使用情况",
+        "risk_points": "展示时间控制证据收集",
+        "basis_summary": "基于学生表达需求大屏配合要求"
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "share",
+          "target_field": "student_activity",
+          "reason": "明确展示环节学生表达支架"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "evidence_note",
+          "reason": "规范课堂证据采集标准"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "share",
+          "step_name": "交流展示",
+          "student_state_before": "能说出颜色但表达单一",
+          "student_state_after": "能用句式清楚表达感受",
+          "teacher_action": "引导使用表达句式",
+          "student_action": "对照支架展示作品",
+          "big_screen_state": "同步展示学生作品",
+          "learning_sheet_state": "记录表达情况",
+          "assessment_evidence": "采集表达质量证据",
+          "risk_and_adjustment": "时间紧张时控制人数"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "share",
+          "target_field": "student_activity",
+          "patch_type": "add_example",
+          "before_summary": "缺少表达支架",
+          "after_candidate": "添加句式支架卡",
+          "reasoning_basis": [
+            "教学预设",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "handout",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "evidence_note",
+          "patch_type": "fill_missing",
+          "before_summary": "证据采集不明确",
+          "after_candidate": "添加证据采集表",
+          "reasoning_basis": [
+            "教学预设",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "rubric"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "大屏配合展示环节切换",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "添加表达句式支架卡",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "规范证据采集标准",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "open_class_ready",
+        "passed_items": [
+          "展示环节清晰",
+          "学生有表达支架",
+          "证据采集规范"
+        ],
+        "missing_items": [],
+        "risk_items": [
+          "展示时间可能紧张"
+        ],
+        "next_best_action": "预演展示环节"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "share环节大屏",
+        "candidate_display_position": "右侧面板",
+        "right_tray_updates": [
+          "表达支架卡",
+          "证据采集表"
+        ],
+        "view_mode_summary": "公开课准备视图"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "open_class",
+      "intent_summary": "公开课展示要清楚，学生表达需支架，证据采集要规范",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "学生清楚表达色彩感受和作品选择",
+        "student_baseline": "愿发言但只说颜色名称",
+        "target_shift": "从说颜色到说感受理由",
+        "teaching_route": [
+          "感知-探究-表现-交流展示"
+        ],
+        "evidence_plan": [
+          "采集表达句式使用情况"
+        ],
+        "risk_points": [
+          "展示时间控制证据收集"
+        ],
+        "basis_summary": [
+          "基于学生表达需求大屏配合要求"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "share",
+          "target_field": "student_activity",
+          "reason": "明确展示环节学生表达支架"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "evidence_note",
+          "reason": "规范课堂证据采集标准"
+        },
+        {
+          "section_id": "preparation",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "share",
+          "step_name": "交流展示",
+          "student_state_before": "能说出颜色但表达单一",
+          "student_state_after": "能用句式清楚表达感受",
+          "teacher_action": "引导使用表达句式",
+          "student_action": "对照支架展示作品",
+          "big_screen_state": "同步展示学生作品",
+          "learning_sheet_state": "记录表达情况",
+          "assessment_evidence": "采集表达质量证据",
+          "risk_and_adjustment": "时间紧张时控制人数"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "share",
+          "target_field": "student_activity",
+          "patch_type": "add_example",
+          "before_summary": "缺少表达支架",
+          "after_candidate": "添加句式支架卡",
+          "reasoning_basis": [
+            "教学预设",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "handout",
+            "teacher_action"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "evidence_note",
+          "patch_type": "fill_missing",
+          "before_summary": "证据采集不明确",
+          "after_candidate": "添加证据采集表",
+          "reasoning_basis": [
+            "教学预设",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "rubric"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "open_class_student_expression-p3",
+          "target_section": "preparation",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“让学生在公开课场景中清楚表达色彩感受、理由和作品选择。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "big_screen",
+          "impact_summary": "大屏配合展示环节切换",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "handout",
+          "impact_summary": "添加表达句式支架卡",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "规范证据采集标准",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "rubric",
+          "impact_summary": "评价标准要看学生能否说出理由和完成适度表达。",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "open_class_ready",
+        "passed_items": [
+          "展示环节清晰",
+          "学生有表达支架",
+          "证据采集规范"
+        ],
+        "missing_items": [],
+        "risk_items": [
+          "展示时间可能紧张"
+        ],
+        "next_best_action": "预演展示环节"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "share环节大屏",
+        "candidate_display_position": "右侧面板",
+        "right_tray_updates": [
+          "表达支架卡",
+          "证据采集表"
+        ],
+        "view_mode_summary": "公开课准备视图"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "公开课展示要清楚，学生表达需支架，证据采集要规范\n学生清楚表达色彩感受和作品选择\n愿发言但只说颜色名称\n从说颜色到说感受理由\n感知-探究-表现-交流展示\n采集表达句式使用情况\n展示时间控制证据收集\n基于学生表达需求大屏配合要求\nshare\n交流展示\n能说出颜色但表达单一\n能用句式清楚表达感受\n引导使用表达句式\n对照支架展示作品\n同步展示学生作品\n记录表达情况\n采集表达质量证据\n时间紧张时控制人数\np1\nteaching_process\nshare\nstudent_activity\nadd_example\n缺少表达支架\n添加句式支架卡\n教学预设\n小备推测\nhandout\nteacher_action\np2\nassessment\n\nevidence_note\nfill_missing\n证据采集不明确\n添加证据采集表\n教学预设\n小备推测\nevidence_note\nrubric\nopen_class_student_expression-p3\npreparation\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“让学生在公开课场景中清楚表达色彩感受、理由和作品选择。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nbig_screen\n大屏配合展示环节切换\nhandout\n添加表达句式支架卡\nevidence_note\n规范证据采集标准\nrubric\n评价标准要看学生能否说出理由和完成适度表达。\nopen_class_ready\n展示环节清晰\n学生有表达支架\n证据采集规范\n展示时间可能紧张\n预演展示环节\nshare环节大屏\n右侧面板\n表达支架卡\n证据采集表\n公开课准备视图",
+    "benchmark_score": {
+      "case_id": "open_class_student_expression",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 5,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 5.0,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": true,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": true,
+      "raw_contract_success": true,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 0,
+      "raw_coverage_error_count": 2,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "missing_expected_section_preparation",
+        "missing_expected_impact_rubric",
+        "schema_drift_detected"
+      ],
+      "repair_suggestion": "加强 expected_target_sections 与 expected_impact_scope 的显式约束。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 23428,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"open_class\",\"intent_summary\":\"公开课展示要清楚，学生表达需支架，证据采集要规范\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"学生清楚表达色彩感受和作品选择\",\"student_baseline\":\"愿发言但只说颜色名称\",\"target_shift\":\"从说颜色到说感受理由\",\"teaching_route\":\"感知-探究-表现-交流展示\",\"evidence_plan\":\"采集表达句式使用情况\",\"risk_points\":\"展示时间控制证据收集\",\"basis_summary\":\"基于学生表达需求大屏配合要求\"},\"target_resolution\":[{\"section_id\":\"teaching_process\",\"step_id\":\"share\",\"target_field\":\"student_activity\",\"reason\":\"明确展示环节学生表达支架\"},{\"section_id\":\"assessment\",\"step_id\":\"\",\"target_field\":\"evidence_note\",\"reason\":\"规范课堂证据采集标准\"}],\"step_reasoning_updates\":[{\"step_id\":\"share\",\"step_name\":\"交流展示\",\"student_state_before\":\"能说出颜色但表达单一\",\"student_state_after\":\"能用句式清楚表达感受\",\"teacher_action\":\"引导使用表达句式\",\"student_action\":\"对照支架展示作品\",\"big_screen_state\":\"同步展示学生作品\",\"learning_sheet_st"
+      }
+    ]
+  },
+  {
+    "case_id": "open_class_material_timing",
+    "lesson_design_mode": "open_class",
+    "teacher_input": "材料什么时候发、学习单什么时候用、大屏什么时候切换，要帮我设计清楚。",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "parser_mode": "json_parse_error",
+    "parser_meta": {
+      "parser_mode": "json_parse_error",
+      "parse_subcode": "invalid_json_output",
+      "parse_error_code": "json_parse_error",
+      "raw_prefix_type": null,
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "json_parse_error"
+    ],
+    "raw_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "raw_coverage_errors": [
+      "payload_not_object"
+    ],
+    "normalized_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "normalized_coverage_errors": [
+      "payload_not_object"
+    ],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 23817,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 23817
+    },
+    "parsed_json": null,
+    "normalized_json": null,
+    "teacher_visible_summary": "",
+    "benchmark_score": {
+      "case_id": "open_class_material_timing",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 1,
+      "impact_scope_score": 1,
+      "quality_gate_score": 2,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 4,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": false,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 1,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "payload_not_object",
+        "parse_error_json_parse_error",
+        "parsed_result_not_object",
+        "payload_not_object",
+        "empty_content",
+        "forbidden_side_effects",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 27171,
+        "raw_response_prefix_redacted": "{\n  \"lesson_design_mode\": \"open_class\",\n  \"intent_summary\": \"明确材料、大屏、学习单的精准发放时机，服务认知推进\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"材料、大屏、学习单要服务于认知推进而非打断课堂\",\n    \"student_baseline\": \"学生对材料很兴奋，过早发放会分散注意力\",\n    \"target_shift\": \"从随意发放到精准时机控制\",\n    \"teaching_route\": [\"感知色彩→探究规律→表现创作\"],\n    \"evidence_plan\": \"观察学生使用材料的时机是否恰当\",\n    \"risk_points\": \"材料过早发放导致课堂分心\",\n    \"basis_summary\": \"基于学生兴奋特点和认知推进需求\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"sense\",\n      \"target_field\": \"教学流程\",\n      \"reason\": \"明确大屏切换时机，先感知后探究\"\n    },\n    {\n      \"section_id\": \"preparation\",\n      \"step_id\": \"\",\n      \"target_field\": \"材料管理\",\n      \"reason\": \"设计材料发放触发点，避免提前发放\"\n    }\n  ],\n  \"step_reasoning_updates\": [\n    {\n      \"step_id\": \"explore\",\n      "
+      },
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 23817,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"open_class\",\"intent_summary\":\"明确三段式材料时机设计\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"材料大屏学习单服务认知推进\",\"student_baseline\":\"材料兴奋过早发放分散注意力\",\"target_shift\":\"被动等材料→主动要材料\",\"teaching_route\":[\"观察感知色卡\",\"探究色彩感觉\",\"限时表现创作\"],\"evidence_plan\":[\"作品完整度\",\"色彩理由表达\"],\"risk_points\":[\"材料发放过早打断思路\"],\"basis_summary\":\"三年级美术色彩单元标准\"},\"target_resolution\":[{\"section\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"teacher_action\",\"reason\":\"明确材料发放时机在探究环节后\"},{\"section\":\"teaching_process\",\"step_id\":\"explore\",\"target_field\":\"big_screen_state\",\"reason\":\"大屏切换与认知推进同步\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"对色彩有好奇无体系\",\"student_state_after\":\"理解色彩感觉与情绪\",\"teacher_action\":\"演示色卡顺序学生跟做\",\"student_action\":\"观察大屏跟随感知\",\"big_screen_state\":\"色卡图片组切换\""
+      }
+    ]
+  },
+  {
+    "case_id": "research_lesson_evidence_chain",
+    "lesson_design_mode": "research_lesson",
+    "teacher_input": "我想研究学生怎么从说颜色好看，过渡到能说明颜色带来的感受。",
+    "strict_json_success": false,
+    "raw_json_parse_success": false,
+    "raw_contract_success": false,
+    "normalized_contract_success": false,
+    "schema_drift_count": 0,
+    "markdown_fence_count": 0,
+    "empty_content_count": 1,
+    "forbidden_side_effects": true,
+    "parser_mode": "json_parse_error",
+    "parser_meta": {
+      "parser_mode": "json_parse_error",
+      "parse_subcode": "invalid_json_output",
+      "parse_error_code": "json_parse_error",
+      "raw_prefix_type": null,
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 2,
+    "attempt_parser_modes": [
+      "json_parse_error",
+      "json_parse_error"
+    ],
+    "raw_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "raw_coverage_errors": [
+      "payload_not_object"
+    ],
+    "normalized_contract_errors": [
+      "parsed_result_not_object"
+    ],
+    "normalized_coverage_errors": [
+      "payload_not_object"
+    ],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 25560,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 25560
+    },
+    "parsed_json": null,
+    "normalized_json": null,
+    "teacher_visible_summary": "",
+    "benchmark_score": {
+      "case_id": "research_lesson_evidence_chain",
+      "strict_json_success": false,
+      "raw_json_parse_success": false,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 1,
+      "impact_scope_score": 1,
+      "quality_gate_score": 2,
+      "quality_score": 0.0,
+      "age_appropriateness_score": 4,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": false,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": false,
+      "normalized_contract_success": false,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 1,
+      "normalized_coverage_error_count": 1,
+      "schema_drift_count": 0,
+      "markdown_fence_count": 0,
+      "empty_content": true,
+      "empty_content_count": 1,
+      "forbidden_side_effects": true,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "payload_not_object",
+        "parse_error_json_parse_error",
+        "parsed_result_not_object",
+        "payload_not_object",
+        "empty_content",
+        "forbidden_side_effects",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 27475,
+        "raw_response_prefix_redacted": "```json\n{\n  \"lesson_design_mode\": \"research_lesson\",\n  \"intent_summary\": \"研究学生从喜好表达到感受说明的过渡\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"观察学生从喜好表达走向感受表达和理由表达的过程\",\n    \"student_baseline\": \"学生有颜色经验，表达停留在喜好判断，缺理由链\",\n    \"target_shift\": \"从说颜色好看到能说明颜色带来的感受并给出理由\",\n    \"teaching_route\": [\"导入-感知-探究-表现-交流展示\"],\n    \"evidence_plan\": [\"学习单理由栏\", \"课堂观察记录\", \"作品说明\"],\n    \"risk_points\": \"学生仍停留在喜好判断，理由链建立困难\",\n    \"basis_summary\": \"教学预设+小备推测\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"analysis\",\n      \"step_id\": \"\",\n      \"target_field\": \"core_learning_problem\",\n      \"reason\": \"明确研究学生表达转变的过程\"\n    },\n    {\n      \"section_id\": \"assessment\",\n      \"step_id\": \"\",\n      \"target_field\": \"assessment_criteria\",\n      \"reason\": \"从喜好判断转向感受表达+理由质量\"\n    }\n  ],\n  \"step_reasoning_updat"
+      },
+      {
+        "parser_mode": "json_parse_error",
+        "latency_ms": 25560,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"research_lesson\",\"intent_summary\":\"研究学生喜好到感受表达的过渡\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"观察学生喜好到感受表达的过渡\",\"student_baseline\":\"学生多用喜好判断，缺理由链\",\"target_shift\":\"能说明颜色带来的感受与理由\",\"teaching_route\":[\"感知色彩\",\"探究感受\",\"表达理由\"],\"evidence_plan\":[\"学习单理由栏\",\"课堂观察记录\"],\"risk_points\":[\"过渡太快学生跟不上\"],\"basis_summary\":\"高资源支持多维证据收集\"},\"target_resolution\":[{\"section_id\":\"goals\",\"step_id\":\"\",\"target_field\":\"learning_objectives\",\"reason\":\"明确感受表达目标\"},{\"section_id\":\"assessment\",\"step_id\":\"explore\",\"target_field\":\"evaluation_criteria\",\"reason\":\"调整评价标准支持过渡\"}],\"step_reasoning_updates\":[{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"表达颜色喜好\",\"student_state_after\":\"能用感受词汇说明颜色\",\"teacher_action\":\"追问引导感受词\",\"student_action\":\"记录感受词汇\",\"big_screen_state\":\"展示学生感受词\",\"learning_sheet_st"
+      }
+    ]
+  },
+  {
+    "case_id": "constrained_no_projector",
+    "lesson_design_mode": "time_or_resource_constrained",
+    "teacher_input": "这节课可能没有投影，帮我改成不用大屏也能推进冷暖色理解。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 1,
+    "attempt_parser_modes": [
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [
+      "step_reasoning_updates_not_list"
+    ],
+    "raw_coverage_errors": [],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 22203,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 22203
+    },
+    "parsed_json": {
+      "lesson_design_mode": "time_or_resource_constrained",
+      "intent_summary": "无投影下用色卡+板书驱动冷暖色探究",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "缺少投影时仍保留直观感受、分类和表达证据",
+        "student_baseline": "需要直观材料支持，单靠口头讲解容易理解偏浅",
+        "target_shift": "用色卡替代投影实现色感直观",
+        "teaching_route": [
+          "色卡感知",
+          "分类配对",
+          "板书记录"
+        ],
+        "evidence_plan": "色卡配对结果+板书分区",
+        "risk_points": "色卡数量不足",
+        "basis_summary": "低资源约束下保留探究本质"
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "sense",
+          "target_field": "activity_sequence",
+          "reason": "色卡感知替代投影感知"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "evidence_collection",
+          "reason": "板书分区作为分类证据"
+        }
+      ],
+      "step_reasoning_updates": {
+        "step_id": "explore",
+        "step_name": "探究",
+        "student_state_before": "依赖投影观察色感",
+        "student_state_after": "手持色卡配对冷暖",
+        "teacher_action": "分发色卡，引导对比",
+        "student_action": "配对并说明理由",
+        "big_screen_state": "无需",
+        "learning_sheet_state": "简记分类结果",
+        "assessment_evidence": "配对准确率",
+        "risk_and_adjustment": "备双套色卡"
+      },
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "preparation",
+          "target_step_id": "",
+          "target_field": "resource_prep",
+          "patch_type": "add_example",
+          "before_summary": "投影准备",
+          "after_candidate": "色卡20组",
+          "reasoning_basis": [
+            "资源约束",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "resource_reference"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "big_screen_state",
+          "patch_type": "revise",
+          "before_summary": "投影展示冷暖色",
+          "after_candidate": "无",
+          "reasoning_basis": [
+            "资源约束"
+          ],
+          "impact_scope": [
+            "big_screen"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "resource_reference",
+          "impact_summary": "色卡20组替代投影",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "需分发管理色卡",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "板书记录替代投影",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "冷暖色探究流程完整"
+        ],
+        "missing_items": [
+          "色卡数量确认"
+        ],
+        "risk_items": [
+          "学生分组管理"
+        ],
+        "next_best_action": "确认色卡准备数量"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "资源准备",
+        "candidate_display_position": "preparation区域",
+        "right_tray_updates": [
+          "色卡20组"
+        ],
+        "view_mode_summary": "低资源模式"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "time_or_resource_constrained",
+      "intent_summary": "无投影下用色卡+板书驱动冷暖色探究",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "缺少投影时仍保留直观感受、分类和表达证据",
+        "student_baseline": "需要直观材料支持，单靠口头讲解容易理解偏浅",
+        "target_shift": "用色卡替代投影实现色感直观",
+        "teaching_route": [
+          "色卡感知",
+          "分类配对",
+          "板书记录"
+        ],
+        "evidence_plan": [
+          "色卡配对结果+板书分区"
+        ],
+        "risk_points": [
+          "色卡数量不足"
+        ],
+        "basis_summary": [
+          "低资源约束下保留探究本质"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "sense",
+          "target_field": "activity_sequence",
+          "reason": "色卡感知替代投影感知"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "evidence_collection",
+          "reason": "板书分区作为分类证据"
+        },
+        {
+          "section_id": "preparation",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "explore",
+          "step_name": "探究",
+          "student_state_before": "学生需要直观材料支持，单靠口头讲解容易理解偏浅。",
+          "student_state_after": "学生能把颜色、感受和表达理由连起来。",
+          "teacher_action": "教师围绕本节关键问题组织观察、比较和表达。",
+          "student_action": "学生参与观察、分类、表达或创作。",
+          "big_screen_state": "不用大屏，改为黑板冷暖分区和实物色卡示范。",
+          "learning_sheet_state": "学习单只保留关键记录格，让学生写或画出感受、分类和理由。",
+          "assessment_evidence": "记录学生表达理由、作品说明或活动表现。",
+          "risk_and_adjustment": "根据学生反应减少讲解，增加直观材料和句式支架。"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "preparation",
+          "target_step_id": "",
+          "target_field": "resource_prep",
+          "patch_type": "add_example",
+          "before_summary": "投影准备",
+          "after_candidate": "色卡20组",
+          "reasoning_basis": [
+            "资源约束",
+            "小备推测"
+          ],
+          "impact_scope": [
+            "resource_reference"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "explore",
+          "target_field": "big_screen_state",
+          "patch_type": "revise",
+          "before_summary": "投影展示冷暖色",
+          "after_candidate": "无",
+          "reasoning_basis": [
+            "资源约束"
+          ],
+          "impact_scope": [
+            "big_screen"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "constrained_no_projector-p3",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“缺少投影时仍保留直观感受、分类和表达证据。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "resource_reference",
+          "impact_summary": "色卡20组替代投影",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "需分发管理色卡",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "板书记录替代投影",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "冷暖色探究流程完整"
+        ],
+        "missing_items": [
+          "色卡数量确认"
+        ],
+        "risk_items": [
+          "学生分组管理"
+        ],
+        "next_best_action": "确认色卡准备数量"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "资源准备",
+        "candidate_display_position": "preparation区域",
+        "right_tray_updates": [
+          "色卡20组"
+        ],
+        "view_mode_summary": "低资源模式"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "无投影下用色卡+板书驱动冷暖色探究\n缺少投影时仍保留直观感受、分类和表达证据\n需要直观材料支持，单靠口头讲解容易理解偏浅\n用色卡替代投影实现色感直观\n色卡感知\n分类配对\n板书记录\n色卡配对结果+板书分区\n色卡数量不足\n低资源约束下保留探究本质\nexplore\n探究\n学生需要直观材料支持，单靠口头讲解容易理解偏浅。\n学生能把颜色、感受和表达理由连起来。\n教师围绕本节关键问题组织观察、比较和表达。\n学生参与观察、分类、表达或创作。\n不用大屏，改为黑板冷暖分区和实物色卡示范。\n学习单只保留关键记录格，让学生写或画出感受、分类和理由。\n记录学生表达理由、作品说明或活动表现。\n根据学生反应减少讲解，增加直观材料和句式支架。\np1\npreparation\n\nresource_prep\nadd_example\n投影准备\n色卡20组\n资源约束\n小备推测\nresource_reference\np2\nteaching_process\nexplore\nbig_screen_state\nrevise\n投影展示冷暖色\n无\n资源约束\nbig_screen\nconstrained_no_projector-p3\nassessment\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“缺少投影时仍保留直观感受、分类和表达证据。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nresource_reference\n色卡20组替代投影\nteacher_action\n需分发管理色卡\nevidence_note\n板书记录替代投影\nbasic_usable\n冷暖色探究流程完整\n色卡数量确认\n学生分组管理\n确认色卡准备数量\n资源准备\npreparation区域\n色卡20组\n低资源模式",
+    "benchmark_score": {
+      "case_id": "constrained_no_projector",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 5,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 5.0,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": true,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": true,
+      "raw_contract_success": false,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 1,
+      "raw_coverage_error_count": 0,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "raw_contract_needs_normalization",
+        "schema_drift_detected"
+      ],
+      "repair_suggestion": "保留本地归一化，同时继续修 prompt，减少旧字段名输出。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 22203,
+        "raw_response_prefix_redacted": "{\"lesson_design_mode\":\"time_or_resource_constrained\",\"intent_summary\":\"无投影下用色卡+板书驱动冷暖色探究\",\"lesson_design_brief_compact\":{\"core_learning_problem\":\"缺少投影时仍保留直观感受、分类和表达证据\",\"student_baseline\":\"需要直观材料支持，单靠口头讲解容易理解偏浅\",\"target_shift\":\"用色卡替代投影实现色感直观\",\"teaching_route\":[\"色卡感知\",\"分类配对\",\"板书记录\"],\"evidence_plan\":\"色卡配对结果+板书分区\",\"risk_points\":\"色卡数量不足\",\"basis_summary\":\"低资源约束下保留探究本质\"},\"target_resolution\":[{\"section_id\":\"teaching_process\",\"step_id\":\"sense\",\"target_field\":\"activity_sequence\",\"reason\":\"色卡感知替代投影感知\"},{\"section_id\":\"assessment\",\"step_id\":\"\",\"target_field\":\"evidence_collection\",\"reason\":\"板书分区作为分类证据\"}],\"step_reasoning_updates\":{\"step_id\":\"explore\",\"step_name\":\"探究\",\"student_state_before\":\"依赖投影观察色感\",\"student_state_after\":\"手持色卡配对冷暖\",\"teacher_action\":\"分发色卡，引导对比\",\"student_action\":\"配对并说明理由\",\"big_screen_stat"
+      }
+    ]
+  },
+  {
+    "case_id": "constrained_30_minutes",
+    "lesson_design_mode": "time_or_resource_constrained",
+    "teacher_input": "这周只有三十分钟，帮我压缩流程，但不要把学生表达和评价证据删掉。",
+    "strict_json_success": true,
+    "raw_json_parse_success": true,
+    "raw_contract_success": false,
+    "normalized_contract_success": true,
+    "schema_drift_count": 1,
+    "markdown_fence_count": 0,
+    "empty_content_count": 0,
+    "forbidden_side_effects": false,
+    "parser_mode": "strict_json_parser",
+    "parser_meta": {
+      "parser_mode": "strict_json_parser",
+      "parse_subcode": null,
+      "parse_error_code": null,
+      "raw_prefix_type": "json_object",
+      "provider_output_sanitized": false,
+      "extraction_required": false
+    },
+    "attempt_count": 1,
+    "attempt_parser_modes": [
+      "strict_json_parser"
+    ],
+    "raw_contract_errors": [],
+    "raw_coverage_errors": [
+      "missing_expected_section_assessment"
+    ],
+    "normalized_contract_errors": [],
+    "normalized_coverage_errors": [],
+    "visible_forbidden_term_hits": [],
+    "secret_scan_hits": [],
+    "provider_called": true,
+    "model_called": true,
+    "latency_ms": 21940,
+    "provider_meta": {
+      "provider": "openai_compatible",
+      "model": "MiniMax-M2.7-highspeed",
+      "base_url_host": "api.minimaxi.com",
+      "credential_source": "env",
+      "reasoning_split": false,
+      "latency_ms": 21940
+    },
+    "parsed_json": {
+      "lesson_design_mode": "time_or_resource_constrained",
+      "intent_summary": "压缩30分钟流程，保留表达和评价证据",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "时间缩短时保留关键认知转换和证据",
+        "student_baseline": "快速进入涂色，表达回看常被压缩",
+        "target_shift": "压缩非表达环节，强化证据收集",
+        "teaching_route": [
+          "导入1min",
+          "感知2min",
+          "探究3min",
+          "表现14min",
+          "交流展示10min"
+        ],
+        "evidence_plan": "一句话表达卡+作品拍照",
+        "risk_points": "表达时间仍可能不足",
+        "basis_summary": "涂色快，表达慢，需重构时间分配"
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "make",
+          "target_field": "time_allocation",
+          "reason": "将表现环节从20min压缩到14min"
+        },
+        {
+          "section_id": "teaching_process",
+          "step_id": "share",
+          "target_field": "time_allocation",
+          "reason": "将交流展示从5min扩展到10min，确保证据"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "share",
+          "step_name": "交流展示",
+          "student_state_before": "完成作品，等待展示",
+          "student_state_after": "使用表达卡简述感受，欣赏同伴作品",
+          "teacher_action": "引导用一句话表达卡，限时发言",
+          "student_action": "贴卡+简述+投票",
+          "big_screen_state": "展示学生作品和表达卡",
+          "learning_sheet_state": "表达卡贴在学习单背面",
+          "assessment_evidence": "一句话表达卡+作品照片",
+          "risk_and_adjustment": "若时间紧，只选3人发言"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "make",
+          "target_field": "time_allocation",
+          "patch_type": "revise",
+          "before_summary": "表现环节20分钟",
+          "after_candidate": "表现环节14分钟",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "share",
+          "target_field": "activity_sequence",
+          "patch_type": "restructure",
+          "before_summary": "交流5分钟，选代表展示",
+          "after_candidate": "交流10分钟，人手一张表达卡，全员参与",
+          "reasoning_basis": [
+            "小备推测"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "handout"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "调整环节时间分配比例",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加表达卡使用环节",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "确保表达卡和作品双证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "时间分配调整",
+          "证据工具保留"
+        ],
+        "missing_items": [
+          "具体表达卡设计"
+        ],
+        "risk_items": [
+          "表达时间是否充足"
+        ],
+        "next_best_action": "确认表达卡格式和数量"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "share环节时间",
+        "candidate_display_position": "share环节下方",
+        "right_tray_updates": [
+          "时间分配调整"
+        ],
+        "view_mode_summary": "压缩表现10min+扩展交流5min"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "normalized_json": {
+      "lesson_design_mode": "time_or_resource_constrained",
+      "intent_summary": "压缩30分钟流程，保留表达和评价证据",
+      "lesson_design_brief_compact": {
+        "core_learning_problem": "时间缩短时保留关键认知转换和证据",
+        "student_baseline": "快速进入涂色，表达回看常被压缩",
+        "target_shift": "压缩非表达环节，强化证据收集",
+        "teaching_route": [
+          "导入1min",
+          "感知2min",
+          "探究3min",
+          "表现14min",
+          "交流展示10min"
+        ],
+        "evidence_plan": [
+          "一句话表达卡+作品拍照"
+        ],
+        "risk_points": [
+          "表达时间仍可能不足"
+        ],
+        "basis_summary": [
+          "涂色快，表达慢，需重构时间分配"
+        ]
+      },
+      "target_resolution": [
+        {
+          "section_id": "teaching_process",
+          "step_id": "make",
+          "target_field": "time_allocation",
+          "reason": "将表现环节从20min压缩到14min"
+        },
+        {
+          "section_id": "teaching_process",
+          "step_id": "share",
+          "target_field": "time_allocation",
+          "reason": "将交流展示从5min扩展到10min，确保证据"
+        },
+        {
+          "section_id": "assessment",
+          "step_id": "",
+          "target_field": "补充设计候选",
+          "reason": "覆盖本案例预期修改位置。"
+        }
+      ],
+      "step_reasoning_updates": [
+        {
+          "step_id": "share",
+          "step_name": "交流展示",
+          "student_state_before": "完成作品，等待展示",
+          "student_state_after": "使用表达卡简述感受，欣赏同伴作品",
+          "teacher_action": "引导用一句话表达卡，限时发言",
+          "student_action": "贴卡+简述+投票",
+          "big_screen_state": "展示学生作品和表达卡",
+          "learning_sheet_state": "表达卡贴在学习单背面",
+          "assessment_evidence": "一句话表达卡+作品照片",
+          "risk_and_adjustment": "若时间紧，只选3人发言"
+        }
+      ],
+      "field_patch_candidates": [
+        {
+          "field_patch_id": "p1",
+          "target_section": "teaching_process",
+          "target_step_id": "make",
+          "target_field": "time_allocation",
+          "patch_type": "revise",
+          "before_summary": "表现环节20分钟",
+          "after_candidate": "表现环节14分钟",
+          "reasoning_basis": [
+            "教学预设"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "p2",
+          "target_section": "teaching_process",
+          "target_step_id": "share",
+          "target_field": "activity_sequence",
+          "patch_type": "restructure",
+          "before_summary": "交流5分钟，选代表展示",
+          "after_candidate": "交流10分钟，人手一张表达卡，全员参与",
+          "reasoning_basis": [
+            "小备推测"
+          ],
+          "impact_scope": [
+            "evidence_note",
+            "handout"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        },
+        {
+          "field_patch_id": "constrained_30_minutes-p3",
+          "target_section": "assessment",
+          "target_step_id": "",
+          "target_field": "设计内容",
+          "patch_type": "revise",
+          "before_summary": "当前段落还需要回应教师输入中的具体课堂问题。",
+          "after_candidate": "围绕“在时间缩短时保留关键认知转换和证据。”补充可执行活动、材料状态和评价证据。",
+          "reasoning_basis": [
+            "教师输入",
+            "教学预设",
+            "资料候选"
+          ],
+          "impact_scope": [
+            "teacher_action",
+            "student_activity",
+            "evidence_note"
+          ],
+          "teacher_review_required": true,
+          "formal_apply_performed": false
+        }
+      ],
+      "impact_scope": [
+        {
+          "affected_object": "teacher_action",
+          "impact_summary": "调整环节时间分配比例",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "student_activity",
+          "impact_summary": "增加表达卡使用环节",
+          "requires_teacher_confirmation": true
+        },
+        {
+          "affected_object": "evidence_note",
+          "impact_summary": "确保表达卡和作品双证据",
+          "requires_teacher_confirmation": true
+        }
+      ],
+      "quality_gate_update": {
+        "level": "basic_usable",
+        "passed_items": [
+          "时间分配调整",
+          "证据工具保留"
+        ],
+        "missing_items": [
+          "具体表达卡设计"
+        ],
+        "risk_items": [
+          "表达时间是否充足"
+        ],
+        "next_best_action": "确认表达卡格式和数量"
+      },
+      "teacher_questions": [],
+      "ui_binding_hint": {
+        "should_enter_edit_mode": true,
+        "edit_target": "share环节时间",
+        "candidate_display_position": "share环节下方",
+        "right_tray_updates": [
+          "时间分配调整"
+        ],
+        "view_mode_summary": "压缩表现10min+扩展交流5min"
+      },
+      "boundary_flags": {
+        "teacher_review_required": true,
+        "formal_apply_performed": false,
+        "database_written": false,
+        "memory_written": false,
+        "feishu_written": false,
+        "formal_export_created": false,
+        "official_archive_created": false
+      }
+    },
+    "teacher_visible_summary": "压缩30分钟流程，保留表达和评价证据\n时间缩短时保留关键认知转换和证据\n快速进入涂色，表达回看常被压缩\n压缩非表达环节，强化证据收集\n导入1min\n感知2min\n探究3min\n表现14min\n交流展示10min\n一句话表达卡+作品拍照\n表达时间仍可能不足\n涂色快，表达慢，需重构时间分配\nshare\n交流展示\n完成作品，等待展示\n使用表达卡简述感受，欣赏同伴作品\n引导用一句话表达卡，限时发言\n贴卡+简述+投票\n展示学生作品和表达卡\n表达卡贴在学习单背面\n一句话表达卡+作品照片\n若时间紧，只选3人发言\np1\nteaching_process\nmake\ntime_allocation\nrevise\n表现环节20分钟\n表现环节14分钟\n教学预设\nteacher_action\nstudent_activity\np2\nteaching_process\nshare\nactivity_sequence\nrestructure\n交流5分钟，选代表展示\n交流10分钟，人手一张表达卡，全员参与\n小备推测\nevidence_note\nhandout\nconstrained_30_minutes-p3\nassessment\n\n设计内容\nrevise\n当前段落还需要回应教师输入中的具体课堂问题。\n围绕“在时间缩短时保留关键认知转换和证据。”补充可执行活动、材料状态和评价证据。\n教师输入\n教学预设\n资料候选\nteacher_action\nstudent_activity\nevidence_note\nteacher_action\n调整环节时间分配比例\nstudent_activity\n增加表达卡使用环节\nevidence_note\n确保表达卡和作品双证据\nbasic_usable\n时间分配调整\n证据工具保留\n具体表达卡设计\n表达时间是否充足\n确认表达卡格式和数量\nshare环节时间\nshare环节下方\n时间分配调整\n压缩表现10min+扩展交流5min",
+    "benchmark_score": {
+      "case_id": "constrained_30_minutes",
+      "strict_json_success": true,
+      "raw_json_parse_success": true,
+      "target_resolution_score": 5,
+      "teaching_reasoning_score": 5,
+      "impact_scope_score": 5,
+      "quality_gate_score": 5,
+      "quality_score": 5.0,
+      "age_appropriateness_score": 5,
+      "not_over_scope": true,
+      "not_too_generic": false,
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "overall_pass": false,
+      "raw_contract_success": true,
+      "normalized_contract_success": true,
+      "raw_contract_error_count": 0,
+      "raw_coverage_error_count": 1,
+      "normalized_contract_error_count": 0,
+      "normalized_coverage_error_count": 0,
+      "schema_drift_count": 1,
+      "markdown_fence_count": 0,
+      "empty_content": false,
+      "empty_content_count": 0,
+      "forbidden_side_effects": false,
+      "issues": [
+        "missing_expected_section_assessment",
+        "schema_drift_detected",
+        "too_generic"
+      ],
+      "repair_suggestion": "继续压 prompt，要求必须引用课题、学生状态、材料和评价证据。"
+    },
+    "boundary_flags": {
+      "teacher_review_required": true,
+      "formal_apply_performed": false,
+      "database_written": false,
+      "memory_written": false,
+      "feishu_written": false,
+      "formal_export_created": false,
+      "official_archive_created": false
+    },
+    "redacted_attempts": [
+      {
+        "parser_mode": "strict_json_parser",
+        "latency_ms": 21940,
+        "raw_response_prefix_redacted": "{\n  \"lesson_design_mode\": \"time_or_resource_constrained\",\n  \"intent_summary\": \"压缩30分钟流程，保留表达和评价证据\",\n  \"lesson_design_brief_compact\": {\n    \"core_learning_problem\": \"时间缩短时保留关键认知转换和证据\",\n    \"student_baseline\": \"快速进入涂色，表达回看常被压缩\",\n    \"target_shift\": \"压缩非表达环节，强化证据收集\",\n    \"teaching_route\": [\"导入1min\", \"感知2min\", \"探究3min\", \"表现14min\", \"交流展示10min\"],\n    \"evidence_plan\": \"一句话表达卡+作品拍照\",\n    \"risk_points\": \"表达时间仍可能不足\",\n    \"basis_summary\": \"涂色快，表达慢，需重构时间分配\"\n  },\n  \"target_resolution\": [\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"make\",\n      \"target_field\": \"time_allocation\",\n      \"reason\": \"将表现环节从20min压缩到14min\"\n    },\n    {\n      \"section_id\": \"teaching_process\",\n      \"step_id\": \"share\",\n      \"target_field\": \"time_allocation\",\n      \"reason\": \"将交流展示从5min扩展到10min，确保证据\"\n    }\n  "
+      }
+    ]
+  }
+]
